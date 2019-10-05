@@ -89,13 +89,47 @@ int birthday(vector<int> s, int d, int m)
 // Complete the divisibleSumPairs function below.
 int divisibleSumPairs(int n, int k, vector<int> ar)
 {
+    int count = 0;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
+            if ((ar[i] + ar[j]) % k == 0)
+            {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+// Complete the findDigits function below.
+int findDigits(int n)
+{
+    int digits = n;
+    int cur_digit;
+    int count = 0;
+
+    do
+    {
+        cur_digit = digits % 10;
+        digits /= 10;
+        if (cur_digit != 0 && n % cur_digit == 0)
+        {
+            ++count;
+        }
+    } while (digits > 0);
+
+    return count;
 }
 
 int main()
 {
-    //  vector<int> v{4};
+    // vector<int> v{1, 3, 2, 6, 1, 2};
     // vector<int> b{16, 32, 96};
     // cout << getTotalX(a, b);
     // cout<<birthday(v,4,1);
+    // cout << divisibleSumPairs(6, 3, v);
+    cout << findDigits(1012);
     return 0;
 }
