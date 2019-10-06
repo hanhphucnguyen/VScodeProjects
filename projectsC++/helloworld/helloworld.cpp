@@ -123,13 +123,73 @@ int findDigits(int n)
     return count;
 }
 
+// Complete the bonAppetit function below.
+void bonAppetit(vector<int> bill, int k, int b)
+{
+    int realTotal = 0;
+    for (int i = 0; i < bill.size(); i++)
+    {
+        if (i == k)
+            continue;
+        else
+        {
+            realTotal += bill[i];
+        }
+    }
+    if (realTotal / 2 == b)
+        cout << "Bon Appetit";
+    else
+        cout << b - realTotal / 2;
+}
+
+// Complete the sockMerchant function below.
+int sockMerchant(int n, vector<int> ar)
+{
+    int result = 0;
+    vector<int> set;
+    bool flag;
+    int count;
+    set.push_back(ar[0]);
+    for (int i = 1; i < ar.size(); i++)
+    {
+        flag = true;
+        for (int j = 0; j < set.size(); j++)
+        {
+            if (ar[i] == set[j])
+            {
+                flag = false;
+                break;
+            }
+        }
+        if (flag)
+        {
+            set.push_back(ar[i]);
+        }
+    }
+
+    for (int i = 0; i < set.size(); i++)
+    {
+        count = 0;
+        for (int j = 0; j < ar.size(); j++)
+        {
+            if (set[i] == ar[j])
+                count++;
+        }
+        result += count / 2;
+    }
+    return result;
+}
+
 int main()
 {
-    // vector<int> v{1, 3, 2, 6, 1, 2};
+    vector<int> v{1, 1, 3, 3, 4, 5, 6};
     // vector<int> b{16, 32, 96};
     // cout << getTotalX(a, b);
     // cout<<birthday(v,4,1);
     // cout << divisibleSumPairs(6, 3, v);
-    cout << findDigits(1012);
+    // cout << findDigits(1012);
+    // bonAppetit(v,1,12);
+    // cout << sockMerchant(0, v);
+
     return 0;
 }
