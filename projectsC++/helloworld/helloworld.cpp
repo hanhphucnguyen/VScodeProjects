@@ -180,9 +180,50 @@ int sockMerchant(int n, vector<int> ar)
     return result;
 }
 
+int migratoryBirds(vector<int> arr)
+{
+    bool flag;
+    int count,max,pos;
+    vector<int> set;
+    vector<int> c;
+    set.push_back(arr[0]);
+    for (int i = 0; i < arr.size(); i++)
+    {
+        flag = true;
+        for (int j = 0 ; j < set.size(); j++)
+        {
+            if (set[j] == arr[i])
+                flag = false;
+        }
+        if (flag)
+            set.push_back(arr[i]);
+    }
+
+    for (int i = 0; i < set.size(); i++)
+    {
+        count = 0;
+        for (int j = 0; j < arr.size(); j++)
+        {
+            if (set[i] == arr[j])
+                count++;
+        }
+        c.push_back(count);
+    }
+    max = c[0];
+    pos=0;
+    for (int i =1;i<c.size();i++)
+    {
+        if ((c[i]>max) || (c[i]==max && set[i]<set[pos])) 
+        {
+            max=c[i];
+            pos =i;
+        }
+    }
+    return set[pos];
+}
 int main()
 {
-    vector<int> v{1, 1, 3, 3, 4, 5, 6};
+    vector<int> v{1, 4, 4, 4, 5,3};
     // vector<int> b{16, 32, 96};
     // cout << getTotalX(a, b);
     // cout<<birthday(v,4,1);
@@ -190,6 +231,6 @@ int main()
     // cout << findDigits(1012);
     // bonAppetit(v,1,12);
     // cout << sockMerchant(0, v);
-
+    // cout<<migratoryBirds(v);
     return 0;
 }
