@@ -70,6 +70,26 @@ int pageCount(int n, int p)
     return count;
 }
 
+int countingValleys(int n, string s)
+{
+    int count = 0;
+    int valley =0;
+    bool flag;
+    for (int i = 0; i < n; i++)
+    {
+        count==0 ? flag=true:false;
+        if (s[i] == 'U')
+            count++;
+        else
+            count--;
+        if(count<0 && flag) {
+            valley++; 
+            flag=false;
+        }
+    }
+    return valley;
+}
+
 int main()
 {
     // vector<int> v{1, 4, 4, 4, 5,3};
