@@ -97,7 +97,7 @@ int countingValleys(int n, string s)
 int getMoneySpent(vector<int> keyboards, vector<int> drives, int b)
 {
 
-    int mink, mind,result;
+    int mink, mind, result;
     mink = keyboards[0];
     for (int i = 0; i < keyboards.size(); i++)
     {
@@ -110,19 +110,21 @@ int getMoneySpent(vector<int> keyboards, vector<int> drives, int b)
         if (drives[i] < mink)
             mind = drives[i];
     }
-    if (mink+mind >b) return -1;else
+    if (mink + mind > b)
+        return -1;
+    else
     {
-        result = mind+mink;
-        for(int i=0;i<keyboards.size();i++)
+        result = mind + mink;
+        for (int i = 0; i < keyboards.size(); i++)
         {
-            for (int j=0;j<drives.size();j++)
+            for (int j = 0; j < drives.size(); j++)
             {
-                if ((keyboards[i]+drives[j]> result) && (keyboards[i]+drives[j]<= b)) result=keyboards[i]+drives[j];
+                if ((keyboards[i] + drives[j] > result) && (keyboards[i] + drives[j] <= b))
+                    result = keyboards[i] + drives[j];
             }
         }
         return result;
     }
-    
 }
 
 int main()
