@@ -73,21 +73,56 @@ int pageCount(int n, int p)
 int countingValleys(int n, string s)
 {
     int count = 0;
-    int valley =0;
+    int valley = 0;
     bool flag;
     for (int i = 0; i < n; i++)
     {
-        count==0 ? flag=true:false;
+        count == 0 ? flag = true : false;
         if (s[i] == 'U')
             count++;
         else
             count--;
-        if(count<0 && flag) {
-            valley++; 
-            flag=false;
+        if (count < 0 && flag)
+        {
+            valley++;
+            flag = false;
         }
     }
     return valley;
+}
+
+/*
+ * Complete the getMoneySpent function below.
+ */
+int getMoneySpent(vector<int> keyboards, vector<int> drives, int b)
+{
+
+    int mink, mind,result;
+    mink = keyboards[0];
+    for (int i = 0; i < keyboards.size(); i++)
+    {
+        if (keyboards[i] < mink)
+            mink = keyboards[i];
+    }
+    mind = drives[0];
+    for (int i = 0; i < drives.size(); i++)
+    {
+        if (drives[i] < mink)
+            mind = drives[i];
+    }
+    if (mink+mind >b) return -1;else
+    {
+        result = mind+mink;
+        for(int i=0;i<keyboards.size();i++)
+        {
+            for (int j=0;j<drives.size();j++)
+            {
+                if ((keyboards[i]+drives[j]> result) && (keyboards[i]+drives[j]<= b)) result=keyboards[i]+drives[j];
+            }
+        }
+        return result;
+    }
+    
 }
 
 int main()
