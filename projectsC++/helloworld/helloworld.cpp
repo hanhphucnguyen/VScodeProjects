@@ -127,6 +127,23 @@ int getMoneySpent(vector<int> keyboards, vector<int> drives, int b)
     }
 }
 
+string catAndMouse(int x, int y, int z)
+{
+    int range1, range2;
+    x - z > 0 ? range1 = x - z : range1 = z - x;
+    y - z > 0 ? range2 = y - z : range2 = z - y;
+
+    if (range1 == range2)
+        return "Mouse C";
+    else
+    {
+        if (range1 > range2)
+            return "Cat B";
+        else
+            return "Cat A";
+    }
+}
+
 int main()
 {
     // vector<int> v{1, 4, 4, 4, 5,3};
