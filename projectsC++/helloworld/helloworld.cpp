@@ -27,10 +27,23 @@ int designerPdfViewer(vector<int> h, string word)
     return max * s;
 }
 
+int utopianTree(int n)
+{
+    int result = 0;
+    for (int i = 0; i <= n; i++)
+    {
+        if (i % 2 == 0)
+            result++;
+        else
+            result *= 2;
+    }
+    return result;
+}
+
 int main()
 {
-    vector<int> v{1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7};
+    // vector<int> v{1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7};
     // cout<<dayOfProgrammer(2016);
-    cout << designerPdfViewer(v, "zaba");
+    // cout << designerPdfViewer(v, "zaba");
     return 0;
 }
