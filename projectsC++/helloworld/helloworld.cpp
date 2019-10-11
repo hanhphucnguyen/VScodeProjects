@@ -153,33 +153,54 @@ string catAndMouse(int x, int y, int z)
 int pickingNumbers(vector<int> a)
 {
     int count, cur, max;
-    max=0;
+    max = 0;
     for (int j = 0; j < a.size(); j++)
     {
         cur = a[j];
         count = 0;
         for (int i = 0; i < a.size(); i++)
         {
-            if ((cur - a[i] >= 0) &&(cur - a[i]<=1)) 
+            if ((cur - a[i] >= 0) && (cur - a[i] <= 1))
                 count++;
         }
-        if (max < count) max=count; 
-        count=0;
-       
+        if (max < count)
+            max = count;
+        count = 0;
+
         for (int i = 0; i < a.size(); i++)
         {
-            if ((cur - a[i] <= 0) &&(cur - a[i]>=-1)) 
+            if ((cur - a[i] <= 0) && (cur - a[i] >= -1))
                 count++;
         }
-        if (max < count) max=count;
+        if (max < count)
+            max = count;
     }
     return max;
 }
 
+// Complete the hurdleRace function below.
+int hurdleRace(int k, vector<int> height)
+{
+    int max = height[0];
+    for (int i = 0; i < height.size(); i++)
+    {
+        if (max < height[i])
+            max = height[i];
+    }
+    if (k >= max)
+    {
+        return 0;
+    }
+    else
+    {
+        return (max - k);
+    }
+}
+
 int main()
 {
-     vector<int> v{4,6,5,3,3,1};
+    vector<int> v{1, 6, 3, 5, 2};
     // cout<<dayOfProgrammer(2016);
-    cout << pickingNumbers(v);
+    cout << hurdleRace(4, v);
     return 0;
 }
