@@ -77,9 +77,22 @@ int beautifulDays(int i, int j, int k)
     return count;
 }
 
+// Complete the viralAdvertising function below.
+int viralAdvertising(int n)
+{
+    vector<int> v1, v2, v3;
+    for (int i = 0; i < n; i++)
+    {
+        i == 0 ? v1.push_back(5) : v1.push_back(v2[i - 1] * 3);
+        v2.push_back(v1[i] / 2);
+        i == 0 ? v3.push_back(v2[0]) : v3.push_back(v3[i - 1] + v2[i]);
+    }
+    return v3[v3.size() - 1];
+}
+
 int main()
 {
     // vector<int> v{1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7};
-    cout << beautifulDays(20, 23, 6);
+    cout << viralAdvertising(3);
     return 0;
 }
