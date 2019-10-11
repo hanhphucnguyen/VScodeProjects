@@ -40,6 +40,19 @@ int utopianTree(int n)
     return result;
 }
 
+string angryProfessor(int k, vector<int> a)
+{
+    int count=0;
+    for (int i = 0; i < a.size(); i++)
+    {
+        if (a[i]<=0) count++;
+    }
+    if (count >= k)
+        return "NO";
+    else
+        return "YES";
+}
+
 int main()
 {
     // vector<int> v{1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7};
