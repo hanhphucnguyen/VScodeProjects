@@ -144,10 +144,42 @@ string catAndMouse(int x, int y, int z)
     }
 }
 
+/*
+ * Complete the 'pickingNumbers' function below.
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER_ARRAY a as parameter.
+ */
+
+int pickingNumbers(vector<int> a)
+{
+    int count, cur, max;
+    max=0;
+    for (int j = 0; j < a.size(); j++)
+    {
+        cur = a[j];
+        count = 0;
+        for (int i = 0; i < a.size(); i++)
+        {
+            if ((cur - a[i] >= 0) &&(cur - a[i]<=1)) 
+                count++;
+        }
+        if (max < count) max=count; 
+        count=0;
+       
+        for (int i = 0; i < a.size(); i++)
+        {
+            if ((cur - a[i] <= 0) &&(cur - a[i]>=-1)) 
+                count++;
+        }
+        if (max < count) max=count;
+    }
+    return max;
+}
+
 int main()
 {
-    // vector<int> v{1, 4, 4, 4, 5,3};
+     vector<int> v{4,6,5,3,3,1};
     // cout<<dayOfProgrammer(2016);
-    cout << pageCount(2, 1);
+    cout << pickingNumbers(v);
     return 0;
 }
