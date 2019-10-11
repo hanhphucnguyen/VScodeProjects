@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -42,10 +43,11 @@ int utopianTree(int n)
 
 string angryProfessor(int k, vector<int> a)
 {
-    int count=0;
+    int count = 0;
     for (int i = 0; i < a.size(); i++)
     {
-        if (a[i]<=0) count++;
+        if (a[i] <= 0)
+            count++;
     }
     if (count >= k)
         return "NO";
@@ -53,10 +55,31 @@ string angryProfessor(int k, vector<int> a)
         return "YES";
 }
 
+// Complete the beautifulDays function below.
+int beautifulDays(int i, int j, int k)
+{
+    string str, ret;
+    int count = 0;
+    int tempNum;
+    for (int t = i; t <= j; t++)
+    {
+        ret = "";
+        str = to_string(t);
+        for (int k = str.size() - 1; k >= 0; k--)
+        {
+            ret += str[k];
+        }
+        stringstream iss(ret);
+        iss >> tempNum;
+        if ((t - tempNum) % k == 0)
+            count++;
+    }
+    return count;
+}
+
 int main()
 {
     // vector<int> v{1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7};
-    // cout<<dayOfProgrammer(2016);
-    // cout << designerPdfViewer(v, "zaba");
+    cout << beautifulDays(20, 23, 6);
     return 0;
 }
