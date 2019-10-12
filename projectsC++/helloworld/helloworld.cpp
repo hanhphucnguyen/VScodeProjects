@@ -90,9 +90,24 @@ int viralAdvertising(int n)
     return v3[v3.size() - 1];
 }
 
+// Complete the saveThePrisoner function below.
+int saveThePrisoner(int n, int m, int s)
+{
+    int a = s + m - 1;
+    if (a > n)
+    {
+        if (a % n == 0)
+        {
+            return n;
+        }
+        return a % n;
+    }
+    return a;
+}
+
 int main()
 {
     // vector<int> v{1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7};
-    cout << viralAdvertising(3);
+    cout << saveThePrisoner(7, 19, 2);
     return 0;
 }
