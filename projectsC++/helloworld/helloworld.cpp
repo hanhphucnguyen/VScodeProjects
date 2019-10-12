@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <sstream>
+#include <deque>
 
 using namespace std;
 
@@ -105,9 +106,35 @@ int saveThePrisoner(int n, int m, int s)
     return a;
 }
 
+// Complete the circularArrayRotation function below.
+vector<int> circularArrayRotation(vector<int> a, int k, vector<int> queries)
+{
+    deque<int> d;
+    vector<int> c;
+    int temp;
+    for (int i = 0; i < a.size(); i++)
+    {
+        d.push_back(a[i]);
+    }
+    for (int i = 0; i < k; i++)
+    {
+        temp = d.back();
+        d.pop_back();
+        d.push_front(temp);
+    }
+    for (int i = 0; i < queries.size(); i++)
+    {
+        c.push_back(d[queries[i]]);
+    }
+
+    return c;
+}
+
 int main()
 {
-    // vector<int> v{1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7};
-    cout << saveThePrisoner(7, 19, 2);
+    vector<int> v{1, 2, 3};
+    vector<int> p{0, 1, 2};
+    // cout << saveThePrisoner(7, 19, 2);
+    circularArrayRotation(v, 2, p);
     return 0;
 }
