@@ -130,11 +130,29 @@ vector<int> circularArrayRotation(vector<int> a, int k, vector<int> queries)
     return c;
 }
 
+// Complete the superReducedString function below.
+string superReducedString(string s)
+{
+
+    for (int i = 0; i < s.size(); i++)
+    {
+        if (s[i] == s[i + 1])
+        {
+            s.erase(i,2);
+            i=-1;
+        }      
+    }
+
+    if (s.empty())
+        return "Empty String";
+    else
+        return s;
+}
+
 int main()
 {
-    vector<int> v{1, 2, 3};
-    vector<int> p{0, 1, 2};
+    // vector<int> v{1, 2, 3};
     // cout << saveThePrisoner(7, 19, 2);
-    circularArrayRotation(v, 2, p);
+    cout << superReducedString("baab") << endl;
     return 0;
 }
