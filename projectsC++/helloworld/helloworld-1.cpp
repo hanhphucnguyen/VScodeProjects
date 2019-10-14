@@ -223,9 +223,9 @@ int migratoryBirds(vector<int> arr)
 }
 int main()
 {
-    vector<int> v{1, 4, 4, 4, 5,3};
-    // vector<int> b{16, 32, 96};
+     vector<int> b{16, 32, 96};
     // cout << getTotalX(a, b);
+    // vector<int> v =breakingRecords(b);
     // cout<<birthday(v,4,1);
     // cout << divisibleSumPairs(6, 3, v);
     // cout << findDigits(1012);
