@@ -3,6 +3,7 @@
 #include <string>
 #include <sstream>
 #include <deque>
+#include <math.h>
 
 using namespace std;
 
@@ -43,7 +44,7 @@ string appendAndDelete(string s, string t, int k)
         return "No";
     }
 
-    else if ((s.length() + t.length() - 2 * commonLength)  <= k )
+    else if ((s.length() + t.length() - 2 * commonLength) <= k)
     {
         return "Yes";
     }
@@ -54,10 +55,31 @@ string appendAndDelete(string s, string t, int k)
     }
 }
 
+int squares(int a, int b)
+{
+    int range;
+    int count =0;
+    for (range = a; range <= b; ++range)
+    {
+
+        int temp = sqrt(range);
+
+        if (temp * temp == range)
+
+        {
+            count++;
+            range += temp * 2;
+        }
+    }
+
+    return count;
+}
+
 int main()
 {
     // vector<int> v{0, 0, 1, 0, 0, 1, 1, 0};
     // cout << jumpingOnClouds(v, 2) << endl;
     // cout<<appendAndDelete("abc","abc",7);
+    // cout << squares(1, 1000);
     return 0;
 }
