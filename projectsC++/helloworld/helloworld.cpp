@@ -58,7 +58,7 @@ string appendAndDelete(string s, string t, int k)
 int squares(int a, int b)
 {
     int range;
-    int count =0;
+    int count = 0;
     for (range = a; range <= b; ++range)
     {
 
@@ -75,11 +75,40 @@ int squares(int a, int b)
     return count;
 }
 
+// Complete the libraryFine function below.
+int libraryFine(int d1, int m1, int y1, int d2, int m2, int y2)
+{
+    int result=0;
+    if (y1>y2)
+    {
+        result = 10000;
+        return result;
+    }else if(y2>y1)
+    {
+        return result;
+    }
+    else if (m1>m2) 
+    {
+       result += (m1-m2) *500;
+       
+    } else if (m1<m2)
+    {
+        return result;
+    }
+    else
+    {
+        if (d1>d2)  result += (d1-d2) *15;
+    }
+    
+    return result;    
+}
+
 int main()
 {
     // vector<int> v{0, 0, 1, 0, 0, 1, 1, 0};
     // cout << jumpingOnClouds(v, 2) << endl;
     // cout<<appendAndDelete("abc","abc",7);
     // cout << squares(1, 1000);
+    cout<<libraryFine(2,7,2015,1,1,2015);
     return 0;
 }
