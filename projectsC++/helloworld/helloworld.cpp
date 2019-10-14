@@ -78,37 +78,70 @@ int squares(int a, int b)
 // Complete the libraryFine function below.
 int libraryFine(int d1, int m1, int y1, int d2, int m2, int y2)
 {
-    int result=0;
-    if (y1>y2)
+    int result = 0;
+    if (y1 > y2)
     {
         result = 10000;
         return result;
-    }else if(y2>y1)
+    }
+    else if (y2 > y1)
     {
         return result;
     }
-    else if (m1>m2) 
+    else if (m1 > m2)
     {
-       result += (m1-m2) *500;
-       
-    } else if (m1<m2)
+        result += (m1 - m2) * 500;
+    }
+    else if (m1 < m2)
     {
         return result;
     }
     else
     {
-        if (d1>d2)  result += (d1-d2) *15;
+        if (d1 > d2)
+            result += (d1 - d2) * 15;
     }
-    
-    return result;    
+
+    return result;
+}
+
+// Complete the cutTheSticks function below.
+vector<int> cutTheSticks(vector<int> arr)
+{
+    vector<int> newv;
+    vector<int>result;
+    int min;
+    do
+    {
+        min = arr[0];
+        result.push_back(arr.size());
+        for (int i = 1; i < arr.size(); i++)
+        {
+            if(min>arr[i]) min=arr[i];
+        }
+
+        for (int i = 0; i < arr.size(); i++)
+        {
+            if (arr[i] - min> 0) newv.push_back(arr[i]-min);
+        }
+        arr.clear();
+        for (int i = 0; i < newv.size(); i++)
+        {
+            arr.push_back(newv[i]);
+        } 
+        newv.clear();      
+        
+    } while (arr.size() > 0);
+    return result;
 }
 
 int main()
 {
-    //  vector<int> v{0, 0, 1, 0, 0, 1, 1, 0};
+     vector<int> v{5,4,4,2,2,8};
     // cout << jumpingOnClouds(v, 2) << endl;
     // cout<<appendAndDelete("abc","abc",7);
     // cout << squares(1, 1000);
     // cout<<libraryFine(2,7,2015,1,1,2015);
+    // vector<int> u = cutTheSticks(v);
     return 0;
 }
