@@ -105,10 +105,10 @@ int libraryFine(int d1, int m1, int y1, int d2, int m2, int y2)
 
 int main()
 {
-    // vector<int> v{0, 0, 1, 0, 0, 1, 1, 0};
+    //  vector<int> v{0, 0, 1, 0, 0, 1, 1, 0};
     // cout << jumpingOnClouds(v, 2) << endl;
     // cout<<appendAndDelete("abc","abc",7);
     // cout << squares(1, 1000);
-    cout<<libraryFine(2,7,2015,1,1,2015);
+    // cout<<libraryFine(2,7,2015,1,1,2015);
     return 0;
 }
