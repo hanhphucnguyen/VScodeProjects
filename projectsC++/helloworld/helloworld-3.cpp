@@ -189,7 +189,14 @@ vector<int> permutationEquation(vector<int> p)
 int main()
 {
     vector<int> v{5, 2, 1, 3, 4};
+    // cout<<designerPdfViewer(v,"abc");
+    // cout<<utopianTree(9);
+    // cout<<angryProfessor(3,v);
+    // cout<<beautifulDays(1,2,3);
+    // cout<<viralAdvertising(3);
     // cout << saveThePrisoner(7, 19, 2);
+    // vector<int>c = circularArrayRotation(v,1,v);
+    // cout<<superReducedString("abc");
     // cout << camelcase("saveChangesInTheEditor");
     permutationEquation(v);
     return 0;
