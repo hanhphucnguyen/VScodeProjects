@@ -201,6 +201,11 @@ int main()
 {
     vector<int> v{1, 6, 3, 5, 2};
     // cout<<dayOfProgrammer(2016);
+    // cout<<pageCount(4,3);
+    // cout<<countingValleys(2,"UDUUUD");
+    // cout<<getMoneySpent(v,v,6);
+    // cout<<catAndMouse(1,2,3);
+    // cout<<pickingNumbers(v);
     cout << hurdleRace(4, v);
     return 0;
 }
