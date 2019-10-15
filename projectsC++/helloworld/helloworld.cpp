@@ -4,6 +4,8 @@
 #include <sstream>
 #include <deque>
 #include <math.h>
+#include <algorithm>
+#include <set>
 
 using namespace std;
 
@@ -158,12 +160,36 @@ int jumpingOnClouds(vector<int> c)
 
 int main()
 {
-    vector<int> v{0, 0, 0, 1, 0, 0};
+    vector<int> v{1, 2, 3, 3, 3, 4, 4, 4, 5};
     // cout << jumpingOnClouds(v, 2) << endl;
     // cout<<appendAndDelete("abc","abc",7);
     // cout << squares(1, 1000);
     // cout<<libraryFine(2,7,2015,1,1,2015);
     // vector<int> u = cutTheSticks(v);
-    cout << jumpingOnClouds(v);
+    // cout << jumpingOnClouds(v);
+    // bool a = binary_search(v.begin(),v.end(),1);
+    // sort(v.begin(),v.end());
+    // vector<int>::iterator it = lower_bound(v.begin(),v.end(),3);  //>=
+    // vector<int>::iterator it2 = upper_bound(v.begin(),v.end(),4); //>
+    // cout<< *it<<endl;
+    // cout<< *it2<<endl;
+    // cout<< it2 - it<<endl;
+    set<int> set;
+    set.insert(5);
+    set.insert(4);
+    set.insert(3);
+    set.insert(2);
+    for (int x : set)
+    {
+        cout << x << " ";
+    }
+    cout << endl;
+
+    auto it = set.find(5);
+    cout << *it << endl;
+
+    auto it2 = set.lower_bound(4);
+    auto it3 = set.lower_bound(6);
+    if (it3 == set.end()) cout<<"can not find that number"<<endl;
     return 0;
 }
