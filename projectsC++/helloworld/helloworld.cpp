@@ -109,7 +109,7 @@ int libraryFine(int d1, int m1, int y1, int d2, int m2, int y2)
 vector<int> cutTheSticks(vector<int> arr)
 {
     vector<int> newv;
-    vector<int>result;
+    vector<int> result;
     int min;
     do
     {
@@ -117,31 +117,53 @@ vector<int> cutTheSticks(vector<int> arr)
         result.push_back(arr.size());
         for (int i = 1; i < arr.size(); i++)
         {
-            if(min>arr[i]) min=arr[i];
+            if (min > arr[i])
+                min = arr[i];
         }
 
         for (int i = 0; i < arr.size(); i++)
         {
-            if (arr[i] - min> 0) newv.push_back(arr[i]-min);
+            if (arr[i] - min > 0)
+                newv.push_back(arr[i] - min);
         }
         arr.clear();
         for (int i = 0; i < newv.size(); i++)
         {
             arr.push_back(newv[i]);
-        } 
-        newv.clear();      
-        
+        }
+        newv.clear();
+
     } while (arr.size() > 0);
     return result;
 }
 
+int jumpingOnClouds(vector<int> c)
+{
+    int i = 0;
+    int count = 0;
+    do
+    {
+        count++;
+        if (c[i + 2] != 1)
+        {
+            i += 2;
+        }
+        else
+        {
+            i += 1;
+        }
+    } while (i <= c.size());
+    return count - 1;
+}
+
 int main()
 {
-     vector<int> v{5,4,4,2,2,8};
+    vector<int> v{0, 0, 0, 1, 0, 0};
     // cout << jumpingOnClouds(v, 2) << endl;
     // cout<<appendAndDelete("abc","abc",7);
     // cout << squares(1, 1000);
     // cout<<libraryFine(2,7,2015,1,1,2015);
     // vector<int> u = cutTheSticks(v);
+    cout << jumpingOnClouds(v);
     return 0;
 }
