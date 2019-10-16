@@ -157,6 +157,7 @@ int jumpingOnClouds(vector<int> c)
     return count - 1;
 }
 
+
 int main()
 {
     vector<int> v{1, 2, 3, 3, 3, 4, 4, 4, 5};
