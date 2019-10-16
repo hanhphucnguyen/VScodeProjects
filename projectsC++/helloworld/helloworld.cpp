@@ -2,10 +2,9 @@
 #include <vector>
 #include <string>
 #include <sstream>
-#include <deque>
 #include <math.h>
 #include <algorithm>
-#include <set>
+
 
 using namespace std;
 
@@ -167,29 +166,5 @@ int main()
     // cout<<libraryFine(2,7,2015,1,1,2015);
     // vector<int> u = cutTheSticks(v);
     // cout << jumpingOnClouds(v);
-    // bool a = binary_search(v.begin(),v.end(),1);
-    // sort(v.begin(),v.end());
-    // vector<int>::iterator it = lower_bound(v.begin(),v.end(),3);  //>=
-    // vector<int>::iterator it2 = upper_bound(v.begin(),v.end(),4); //>
-    // cout<< *it<<endl;
-    // cout<< *it2<<endl;
-    // cout<< it2 - it<<endl;
-    set<int> set;
-    set.insert(5);
-    set.insert(4);
-    set.insert(3);
-    set.insert(2);
-    for (int x : set)
-    {
-        cout << x << " ";
-    }
-    cout << endl;
-
-    auto it = set.find(5);
-    cout << *it << endl;
-
-    auto it2 = set.lower_bound(4);
-    auto it3 = set.lower_bound(6);
-    if (it3 == set.end()) cout<<"can not find that number"<<endl;
     return 0;
 }
