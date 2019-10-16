@@ -4,7 +4,7 @@
 #include <sstream>
 #include <math.h>
 #include <algorithm>
-
+#include <map>
 
 using namespace std;
 
@@ -157,15 +157,46 @@ int jumpingOnClouds(vector<int> c)
     return count - 1;
 }
 
+// Complete the equalizeArray function below.
+int equalizeArray(vector<int> arr)
+{
+    map<int, int> m;
+    int count = 0;
+    int max;
+    for (int i = 0; i < arr.size(); i++)
+    {
+        m[arr[i]]++;
+    }
+    for (auto it = m.begin(); it != m.end(); it++)
+    {
+        if (it == m.begin())
+            max = it->second;
+        else
+        {
+            if (max < it->second)
+                max = it->second;
+        }
+    }
+
+    if (max == 1)
+        return arr.size() - 1;
+    else
+    {
+        count = arr.size() - max;
+    }
+
+    return count;
+}
 
 int main()
 {
-    vector<int> v{1, 2, 3, 3, 3, 4, 4, 4, 5};
+    vector<int> v{1, 2, 3, 1, 2, 3, 3, 3};
     // cout << jumpingOnClouds(v, 2) << endl;
     // cout<<appendAndDelete("abc","abc",7);
     // cout << squares(1, 1000);
     // cout<<libraryFine(2,7,2015,1,1,2015);
     // vector<int> u = cutTheSticks(v);
     // cout << jumpingOnClouds(v);
+    cout << equalizeArray(v);
     return 0;
 }
