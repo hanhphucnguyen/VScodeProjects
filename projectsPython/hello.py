@@ -4,13 +4,7 @@
 # print('lalala {}'.format(a))
 x = 6
 y = 8
-if x > y:
-    print('gfgg')
-elif x == y:
-    print('ffdgfd')
-elif x == 6:
-    pass
-elif x == 8:
-    pass
-else:
-    print('gfhgdf')
+z =[1,2,3,4,5,6]
+
+for i in range(0,len(z)):
+    print(z[i])
