@@ -39,6 +39,6 @@ long repeatedString(string s, long n)
 int main()
 {
     // vector<int> v{1, 2, 3, 1, 2, 3, 3, 3};
-    cout << repeatedString("a", 10) << endl;
+    // cout << repeatedString("a", 10) << endl;
     return 0;
 }
