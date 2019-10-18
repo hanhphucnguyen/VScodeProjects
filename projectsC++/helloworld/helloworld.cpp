@@ -101,5 +101,6 @@ int main()
     // cout << repeatedString("a", 10) << endl;
     // vector<string> c{"10101","11100","11010","00101"};
     // vector<int> result = acmTeam(c);
+    // vector<int> result = stones(3,1,2);
     return 0;
 }
