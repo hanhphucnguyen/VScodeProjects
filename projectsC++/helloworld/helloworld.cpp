@@ -81,16 +81,18 @@ vector<int> acmTeam(vector<string> topic)
 vector<int> stones(int n, int a, int b)
 {
     set<int> st;
-    vector<int>result;
+    vector<int> result;
 
     for (int i = 0; i < n; i++)
         st.insert(i * a + (n - 1 - i) * b);
-    
-    for(auto x:st)
+
+    for (auto x : st)
     {
         result.push_back(x);
     }
     return result;
+    // def stones(n, a, b):
+    // return sorted(set([a*i+b*(n-1-i) for i in range(n)]))
 }
 
 int main()
