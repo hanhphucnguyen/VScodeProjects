@@ -8,5 +8,6 @@ z =[1,2,3,4,5,6]
 i = True
 
 while i:
-    print('hgh')
+    print('hgh {}'.format(x))
+    print(f'bgdfhd {y}')
     i=False
