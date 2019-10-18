@@ -95,6 +95,27 @@ vector<int> stones(int n, int a, int b)
     // return sorted(set([a*i+b*(n-1-i) for i in range(n)]))
 }
 
+// Complete the howManyGames function below.
+int howManyGames(int p, int d, int m, int s)
+{
+    int curPrice = p;
+    int count = 0;
+    while (s > 0)
+    {
+        s -= curPrice;
+        if (s < 0)
+            break;
+        else
+        {
+            count++;
+            curPrice -= d;
+            if (curPrice < m)
+                curPrice = m;
+        }
+    }
+    return count;
+}
+
 int main()
 {
     // vector<int> v{1, 2, 3, 1, 2, 3, 3, 3};
@@ -102,5 +123,6 @@ int main()
     // vector<string> c{"10101","11100","11010","00101"};
     // vector<int> result = acmTeam(c);
     // vector<int> result = stones(3,1,2);
+    cout<<howManyGames(20,3,6,85);
     return 0;
 }
