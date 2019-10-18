@@ -36,9 +36,51 @@ long repeatedString(string s, long n)
     }
 }
 
+vector<int> acmTeam(vector<string> topic)
+{
+    int maxTopic = 0;
+    int topics;
+    int numOfGroup = 0;
+    int count = 0;
+    for (int i = 0; i < topic.size(); i++)
+    {
+        for (int j = 0; j < topic.size(); j++)
+        {
+            if (i == j)
+                continue;
+            else
+            {
+                count = 0;
+                for (int k = 0; k < topic[i].size(); k++)
+                {
+                    if (topic[i][k] == '1' || topic[j][k] == '1')
+                        count++;
+                }
+                topics = count;
+            }
+            if (maxTopic < topics)
+            {
+                maxTopic = topics;
+                numOfGroup = 1;
+            }
+            else
+            {
+                if (maxTopic == topics && i<j)
+                    numOfGroup++;
+            }
+        }
+    }
+    vector<int> v;
+    v.push_back(maxTopic);
+    v.push_back(numOfGroup);
+    return v;
+}
+
 int main()
 {
     // vector<int> v{1, 2, 3, 1, 2, 3, 3, 3};
     // cout << repeatedString("a", 10) << endl;
+    // vector<string> c{"10101","11100","11010","00101"};
+    // vector<int> result = acmTeam(c);
     return 0;
 }
