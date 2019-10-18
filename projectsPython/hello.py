@@ -5,8 +5,8 @@
 x = 6
 y = 8
 z =[1,2,3,4,5,6]
+i = True
 
-
-while x<10:
-    x +=1
+while i:
     print('hgh')
+    i=False
