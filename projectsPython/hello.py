@@ -5,9 +5,9 @@
 x = 6
 y = 8
 z =[1,2,3,4,5,6]
-i = True
+i = 'ads'
 
-while i:
-    print('hgh {}'.format(x))
-    print(f'bgdfhd {y}')
-    i=False
+for i in z:
+    print(i)
+i=9
+print(i)
