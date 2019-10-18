@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <set>
 
 using namespace std;
 
@@ -65,7 +66,7 @@ vector<int> acmTeam(vector<string> topic)
             }
             else
             {
-                if (maxTopic == topics && i<j)
+                if (maxTopic == topics && i < j)
                     numOfGroup++;
             }
         }
@@ -74,6 +75,22 @@ vector<int> acmTeam(vector<string> topic)
     v.push_back(maxTopic);
     v.push_back(numOfGroup);
     return v;
+}
+
+// Complete the stones function below.
+vector<int> stones(int n, int a, int b)
+{
+    set<int> st;
+    vector<int>result;
+
+    for (int i = 0; i < n; i++)
+        st.insert(i * a + (n - 1 - i) * b);
+    
+    for(auto x:st)
+    {
+        result.push_back(x);
+    }
+    return result;
 }
 
 int main()
