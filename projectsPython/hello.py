@@ -6,7 +6,7 @@ x = 6
 y = 8
 z =[1,2,3,4,5,6]
 
-# for i in range(0,len(z)):
-#     print(z[i])
-for i in range(0,5):
-    print('fvdsgds')
+
+while x<10:
+    x +=1
+    print('hgh')
