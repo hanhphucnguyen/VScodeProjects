@@ -124,6 +124,10 @@ vector<int> serviceLane(int n, vector<vector<int>> cases)
    {
        if (i==0) continue; else
        {
+           for (int j = 0; j < cases[i].size(); i++)
+           {
+               /* code */
+           }
            
        }
        
