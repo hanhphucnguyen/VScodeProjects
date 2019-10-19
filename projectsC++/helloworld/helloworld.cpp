@@ -116,31 +116,6 @@ int howManyGames(int p, int d, int m, int s)
     return count;
 }
 
-// Complete the serviceLane function below.
-vector<int> serviceLane(int n, vector<vector<int>> cases)
-{
-   vector<int> result;
-   for (int i = 0; i < n; i++)
-   {
-       if (i==0) continue; else
-       {
-           for (int j = 0; j < cases[i].size(); i++)
-           {
-               /* code */
-           }
-           
-       }
-       
-
-
-       result.push_back();
-   }
-   
-   return result;
-
-
-}
-
 int main()
 {
     // vector<int> v{1, 2, 3, 1, 2, 3, 3, 3};
