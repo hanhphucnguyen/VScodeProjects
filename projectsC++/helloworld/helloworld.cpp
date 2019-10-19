@@ -116,6 +116,27 @@ int howManyGames(int p, int d, int m, int s)
     return count;
 }
 
+// Complete the serviceLane function below.
+vector<int> serviceLane(int n, vector<vector<int>> cases)
+{
+   vector<int> result;
+   for (int i = 0; i < n; i++)
+   {
+       if (i==0) continue; else
+       {
+           
+       }
+       
+
+
+       result.push_back();
+   }
+   
+   return result;
+
+
+}
+
 int main()
 {
     // vector<int> v{1, 2, 3, 1, 2, 3, 3, 3};
@@ -123,6 +144,6 @@ int main()
     // vector<string> c{"10101","11100","11010","00101"};
     // vector<int> result = acmTeam(c);
     // vector<int> result = stones(3,1,2);
-    cout<<howManyGames(20,3,6,85);
+    // cout<<howManyGames(20,3,6,85);
     return 0;
 }
