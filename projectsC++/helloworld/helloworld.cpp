@@ -115,7 +115,7 @@ int howManyGames(int p, int d, int m, int s)
     }
     return count;
 }
-    
+     
 int main()
 {
     // vector<int> v{1, 2, 3, 1, 2, 3, 3, 3};
