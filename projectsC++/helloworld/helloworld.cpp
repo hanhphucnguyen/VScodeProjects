@@ -119,8 +119,8 @@ int howManyGames(int p, int d, int m, int s)
 // Complete the minimumDistances function below.
 int minimumDistances(vector<int> a)
 {
-    int result=0;
-    int min=0;
+    int result = 0;
+    int min = 0;
     for (int i = 0; i < a.size(); i++)
     {
         for (int j = i + 1; j < a.size(); j++)
@@ -128,12 +128,12 @@ int minimumDistances(vector<int> a)
             if (a[i] == a[j])
             {
                 min = abs(i - j);
-                if (result==0 || result > min)
+                if (result == 0 || result > min)
                     result = min;
             }
         }
     }
-    if (min==0)
+    if (min == 0)
         return -1;
     else
     {
@@ -141,14 +141,19 @@ int minimumDistances(vector<int> a)
     }
 }
 
+// Complete the kaprekarNumbers function below.
+void kaprekarNumbers(int p, int q)
+{
+}
+
 int main()
 {
-     vector<int> v{7 ,1 ,3, 4 ,1, 7};
+    vector<int> v{7, 1, 3, 4, 1, 7};
     // cout << repeatedString("a", 10) << endl;
     // vector<string> c{"10101","11100","11010","00101"};
     // vector<int> result = acmTeam(c);
     // vector<int> result = stones(3,1,2);
     // cout<<howManyGames(20,3,6,85);
-    cout<<minimumDistances(v);
+    // cout << minimumDistances(v);
     return 0;
 }
