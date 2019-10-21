@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <set>
+#include <sstream>
 
 using namespace std;
 
@@ -144,6 +145,52 @@ int minimumDistances(vector<int> a)
 // Complete the kaprekarNumbers function below.
 void kaprekarNumbers(int p, int q)
 {
+    vector<int> v;
+    long int temp;
+    int temp1, temp2;
+    stringstream iss;
+    char c;
+    string s, s1, s2;
+    for (int i = p; i <= q; i++)
+    {
+        if (i == 1)
+            v.push_back(1);
+        else
+        {
+            s = "";
+            s1 = "";
+            s2 = "";
+            temp = (long int)i * i;
+            iss.clear();
+            iss << temp;
+            while (iss >> c)
+            {
+                s += c;
+            }
+            for (int j = 0; j < s.size(); j++)
+            {
+                j < s.size() / 2 ? s1 += s[j] : s2 += s[j];
+            }
+            iss.clear();
+            iss << s1;
+            iss >> temp1;
+            iss.clear();
+            iss << s2;
+            iss >> temp2;
+            if (temp1 + temp2 == i)
+                v.push_back(i);
+        }
+    }
+
+    if (v.size() == 0)
+        cout << "INVALID RANGE" << endl;
+    else
+    {
+        for (int i : v)
+        {
+            cout << i << ' ';
+        }
+    }
 }
 
 int main()
@@ -155,5 +202,6 @@ int main()
     // vector<int> result = stones(3,1,2);
     // cout<<howManyGames(20,3,6,85);
     // cout << minimumDistances(v);
+    kaprekarNumbers(77778,77778);
     return 0;
 }
