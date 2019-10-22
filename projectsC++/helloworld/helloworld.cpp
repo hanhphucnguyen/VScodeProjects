@@ -202,6 +202,6 @@ int main()
     // vector<int> result = stones(3,1,2);
     // cout<<howManyGames(20,3,6,85);
     // cout << minimumDistances(v);
-    kaprekarNumbers(77778,77778);
+    // kaprekarNumbers(77778,77778);
     return 0;
 }
