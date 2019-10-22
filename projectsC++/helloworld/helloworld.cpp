@@ -193,9 +193,30 @@ void kaprekarNumbers(int p, int q)
     }
 }
 
+// Complete the beautifulTriplets function below.
+int beautifulTriplets(int d, vector<int> arr)
+{
+    int  count=0;
+    for (int i = 0; i < arr.size() - 2; i++)
+    {
+        for (int j = i + 1; i < arr.size(); j++)
+        {
+            if (arr[i] == arr[j] - d)
+            {
+                for (int k = j + 1; k < arr.size(); k++)
+                {
+                    if (arr[j] == arr[k] - d)
+                      count++;
+                }
+            }
+        }
+    }
+    return count;
+}
+
 int main()
 {
-    vector<int> v{7, 1, 3, 4, 1, 7};
+    vector<int> v{1, 2 ,4, 5, 7, 8, 10};
     // cout << repeatedString("a", 10) << endl;
     // vector<string> c{"10101","11100","11010","00101"};
     // vector<int> result = acmTeam(c);
@@ -203,5 +224,6 @@ int main()
     // cout<<howManyGames(20,3,6,85);
     // cout << minimumDistances(v);
     // kaprekarNumbers(77778,77778);
+    cout<<beautifulTriplets(3,v);
     return 0;
 }
