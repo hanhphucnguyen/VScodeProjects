@@ -197,9 +197,11 @@ void kaprekarNumbers(int p, int q)
 int beautifulTriplets(int d, vector<int> arr)
 {
     int  count=0;
-    for (int i = 0; i < arr.size() - 2; i++)
+    if (arr.size()==1) return 0; else
     {
-        for (int j = i + 1; i < arr.size(); j++)
+        for (int i = 0; i < arr.size() - 2; i++)
+    {
+        for (int j = i + 1; j < arr.size(); j++)
         {
             if (arr[i] == arr[j] - d)
             {
@@ -212,6 +214,7 @@ int beautifulTriplets(int d, vector<int> arr)
         }
     }
     return count;
+    }   
 }
 
 int main()
