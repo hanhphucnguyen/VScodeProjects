@@ -227,6 +227,6 @@ int main()
     // cout<<howManyGames(20,3,6,85);
     // cout << minimumDistances(v);
     // kaprekarNumbers(77778,77778);
-    cout<<beautifulTriplets(3,v);
+    // cout<<beautifulTriplets(3,v);
     return 0;
 }
