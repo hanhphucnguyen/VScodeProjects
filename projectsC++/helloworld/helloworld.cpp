@@ -17,7 +17,7 @@ vector<string> cavityMap(vector<string> grid)
         for (int j = 0; j < grid[i].size(); j++)
         {
             if (i - 1 >= 0 && i + 1 < grid.size() && j - 1 >= 0 && j + 1 < grid[i].size() && grid[i - 1][j] < grid[i][j] && grid[i + 1][j] < grid[i][j] && grid[i][j - 1] < grid[i][j] && grid[i][j + 1] < grid[i][j])
-                temp += 'x';
+                temp += 'X';
             else
             {
                 temp += grid[i][j];
@@ -30,8 +30,8 @@ vector<string> cavityMap(vector<string> grid)
 
 int main()
 {
-    vector<string> v{"1112", "1912", "1892","1234"};
-    vector<string> test = cavityMap(v);
+    // vector<string> v{"1112", "1912", "1892","1234"};
+    // vector<string> test = cavityMap(v);
 
     return 0;
 }
