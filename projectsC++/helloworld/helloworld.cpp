@@ -13,7 +13,7 @@ vector<string> cavityMap(vector<string> grid)
     string temp;
     for (int i = 0; i < grid.size(); i++)
     {
-        temp="";
+        temp = "";
         for (int j = 0; j < grid[i].size(); j++)
         {
             if (i - 1 >= 0 && i + 1 < grid.size() && j - 1 >= 0 && j + 1 < grid[i].size() && grid[i - 1][j] < grid[i][j] && grid[i + 1][j] < grid[i][j] && grid[i][j - 1] < grid[i][j] && grid[i][j + 1] < grid[i][j])
@@ -28,10 +28,37 @@ vector<string> cavityMap(vector<string> grid)
     return result;
 }
 
+// Complete the chocolateFeast function below.
+int chocolateFeast(int n, int c, int m)
+{
+    int count = 0;
+    int temp, left;
+    bool flag = true;
+    temp = n / c;
+    count += temp;
+    left = temp;
+    while (left >= m && flag)
+    {
+        count += left / m;
+        if (left / m + left % m == m)
+        {
+            count++;
+            flag = false;
+        }
+        else
+        {
+              left = left % m;
+        }
+        
+    }
+    return count;
+}
+
 int main()
 {
     // vector<string> v{"1112", "1912", "1892","1234"};
     // vector<string> test = cavityMap(v);
+    cout << chocolateFeast(12, 4, 4);
 
     return 0;
 }
