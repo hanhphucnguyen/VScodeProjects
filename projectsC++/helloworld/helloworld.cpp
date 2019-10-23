@@ -33,23 +33,21 @@ int chocolateFeast(int n, int c, int m)
 {
     int count = 0;
     int temp, left;
-    bool flag = true;
     temp = n / c;
     count += temp;
     left = temp;
-    while (left >= m && flag)
+    while (left >= m)
     {
         count += left / m;
         if (left / m + left % m == m)
         {
             count++;
-            flag = false;
+            break;
         }
         else
         {
-              left = left % m;
+            left = left / m + left % m;
         }
-        
     }
     return count;
 }
@@ -58,7 +56,7 @@ int main()
 {
     // vector<string> v{"1112", "1912", "1892","1234"};
     // vector<string> test = cavityMap(v);
-    cout << chocolateFeast(12, 4, 4);
+    cout << chocolateFeast(6, 2, 2);
 
     return 0;
 }
