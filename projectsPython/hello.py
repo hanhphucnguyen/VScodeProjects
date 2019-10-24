@@ -2,17 +2,25 @@
 # a: int = 9
 # print('this is version {}'.format(platform.python_version()))
 # print('lalala {}'.format(a))
-class Car:
-    serial = 1234;
-    model = 1990
-    def showInfo(self,a,b):
-        print(f'{self.serial}  {a} {b} {self.model}')
 
-def main():  
-    car = Car()
-    car.showInfo()
+
+class Car:
+    def __init__(self, *a):
+        self.a = a[0]
+        self.b = a[1]
+    def setA(self,a=None):
+        if a: self.a=a
+
+    def __str__(self):
+        return f'this is to string method {self.a} {self.b}'
+
+
+def main():
+    car = Car('fghffd', 546)
+    car.setA('def')
+    print(car)
+    
 
 
 if __name__ == "__main__":
     main()
-  
