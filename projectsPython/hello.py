@@ -4,15 +4,19 @@
 # print('lalala {}'.format(a))
 
 def main():  
-    a= dict(a=1,b=2)
-    b= [1,2,3,4,5]
-    # kitten(**a)
-    for i in inclusive_range(4):
-        print(i)
+    f3()
+    
+def f(ff):
+    def wrap():
+        print('this is before f') 
+        ff()
+        print('this is after f')
+    return wrap
 
-def kitten(**b):   
-    for i in b:
-        print(f'{i}  {b[i]}')
+@f
+def f3():
+    print('this is f3')
 
 if __name__ == "__main__":
     main()
+  
