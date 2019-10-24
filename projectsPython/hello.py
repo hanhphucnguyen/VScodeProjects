@@ -7,18 +7,20 @@
 class Car:
     def __init__(self, *a):
         self.a = a[0]
-        self.b = a[1] 
-    def setA(self,a=None):
-        if a: self.a=a
+        self.b = a[1]
+        self.c: int = 9
+
+    def setA(self, a=None):
+        if a:
+            self.a = a
 
     def __str__(self):
         return f'this is to string method {self.a} {self.b}'
 
 
 def main():
-    car = Car('fghffd',65756)
+    car = Car('fghffd', 65756)
     print(car)
-    
 
 
 if __name__ == "__main__":
