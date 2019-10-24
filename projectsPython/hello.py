@@ -2,11 +2,15 @@
 # a: int = 9
 # print('this is version {}'.format(platform.python_version()))
 # print('lalala {}'.format(a))
+class Car:
+    serial = 1234;
+    model = 1990
+    def showInfo(self,a,b):
+        print(f'{self.serial}  {a} {b} {self.model}')
 
 def main():  
-    a= range(10)
-    for i in a:
-        print(i)
+    car = Car()
+    car.showInfo()
 
 
 if __name__ == "__main__":
