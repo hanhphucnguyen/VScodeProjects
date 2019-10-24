@@ -5,7 +5,10 @@
 
 def main():  
     a= dict(a=1,b=2)
-    kitten(**a)
+    b= [1,2,3,4,5]
+    # kitten(**a)
+    for i in inclusive_range(4):
+        print(i)
 
 def kitten(**b):   
     for i in b:
