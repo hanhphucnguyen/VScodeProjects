@@ -3,14 +3,13 @@
 # print('this is version {}'.format(platform.python_version()))
 # print('lalala {}'.format(a))
 
-def main():
-    x=5
-    kitten(x)
-    print(f'x now have value: {x}')
+def main():  
+    kitten()
 
-def kitten(a):
-    a=3
-    print(a)
+def kitten():   
+    b= [1,2,3,4,5,6]
+    for i in range(len(b)):
+        print(b[i])
 
 if __name__ == "__main__":
     main()
