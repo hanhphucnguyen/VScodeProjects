@@ -5,10 +5,13 @@
 
 def main():  
     a=dict(lala=1,b=2)
-    for i in a.values():
-        print(f'{i} ')
-
-    print(a.get('lal'))
+    # b= [5,4,2,8,9]
+    # b.sort()
+    # for i in b:
+    #     print(i)
+    c = {6,5,4,7,7}
+    for i in c:
+        print(i)
 
 
 if __name__ == "__main__":
