@@ -4,13 +4,8 @@
 # print('lalala {}'.format(a))
 
 def main():  
-    a=dict(lala=1,b=2)
-    # b= [5,4,2,8,9]
-    # b.sort()
-    # for i in b:
-    #     print(i)
-    c = {6,5,4,7,7}
-    for i in c:
+    a= range(10)
+    for i in a:
         print(i)
 
 
