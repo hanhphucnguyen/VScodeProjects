@@ -7,7 +7,7 @@
 class Car:
     def __init__(self, *a):
         self.a = a[0]
-        self.b = a[1]
+        self.b = a[1] 
     def setA(self,a=None):
         if a: self.a=a
 
@@ -16,8 +16,7 @@ class Car:
 
 
 def main():
-    car = Car('fghffd', 546)
-    car.setA('def')
+    car = Car('fghffd',65756)
     print(car)
     
 
