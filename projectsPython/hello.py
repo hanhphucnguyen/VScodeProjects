@@ -4,12 +4,12 @@
 # print('lalala {}'.format(a))
 
 def main():  
-    a= [2,3,4,5,6]
-    kitten(*a)
+    a= dict(a=1,b=2)
+    kitten(**a)
 
-def kitten(*b):   
+def kitten(**b):   
     for i in b:
-        print(i)
+        print(f'{i}  {b[i]}')
 
 if __name__ == "__main__":
     main()
