@@ -19,10 +19,15 @@ class Car:
 
 
 def main():
-    a= "gdrgfrghfd ngfnfg"
-    b = a.split()
-    c = ' '.join(b)
-    print(c)
+    p= open('text.txt')
+    count =0
+    s=[]
+    for i in p:
+        s.append(i)      
+    print(s)
+    string = ''.join(s)
+    print(string)
+  
 
 
 if __name__ == "__main__":
