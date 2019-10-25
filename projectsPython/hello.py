@@ -19,9 +19,12 @@ class Car:
 
 
 def main():
-    car = Car('fghffd', 65756)
-    print(car)
+    a= "gdrgfrghfd ngfnfg"
+    b = a.split()
+    c = ' '.join(b)
+    print(c)
 
 
 if __name__ == "__main__":
     main()
+    
