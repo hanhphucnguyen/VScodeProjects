@@ -19,17 +19,13 @@ class Car:
 
 
 def main():
-    p= open('text.txt')
-    count =0
-    s=[]
-    for i in p:
-        s.append(i)      
-    print(s)
-    string = ''.join(s)
-    print(string)
-  
+    file1 = open('text.txt', 'rt')
+    file2 = open('textcopy.txt', 'wt')
+    for i in file1:
+        file2.writelines(i)
+    file2.close()
+    print('done')
 
 
 if __name__ == "__main__":
     main()
-    
