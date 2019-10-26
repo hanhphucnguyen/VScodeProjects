@@ -22,7 +22,7 @@ def main():
     file1 = open('text.txt', 'rt')
     file2 = open('textcopy.txt', 'wt')
     for i in file1:
-        file2.writelines(i)
+        print(i.rstrip(), file=file2)
     file2.close()
     print('done')
 
