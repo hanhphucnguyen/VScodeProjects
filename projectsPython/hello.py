@@ -3,8 +3,14 @@
 # print('this is version {}'.format(platform.python_version()))
 # print('lalala {}'.format(a))
 def main():
-    print('hello world',end=' ')
-    print('gfdhd')
+
+    l = [1,1,1,2,3,4,4]
+    l.sort()
+    for i in range(len(l)):
+        if (i>0 and l[i-1]==l[i]):
+            continue
+        else: 
+            print(f'{l[i]} appear {l.count(l[i])}')
    
     # p= open('text.txt', 'rt')
     # q = open('textcopy.txt', 'wt')
