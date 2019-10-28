@@ -3,7 +3,9 @@
 # print('this is version {}'.format(platform.python_version()))
 # print('lalala {}'.format(a))
 def main():
-    print('hello world')
+    print('hello world',end=' ')
+    print('gfdhd')
+   
     # p= open('text.txt', 'rt')
     # q = open('textcopy.txt', 'wt')
     # for i in p:
