@@ -5,12 +5,15 @@
 def main():
 
     l = [1,1,1,2,3,4,4]
-    l.sort()
-    for i in range(len(l)):
-        if (i>0 and l[i-1]==l[i]):
-            continue
-        else: 
-            print(f'{l[i]} appear {l.count(l[i])}')
+    l=9
+    print(l)
+    # l.reverse()
+    # print(l)
+    # for i in range(len(l)):
+    #     if (i>0 and l[i-1]==l[i]):
+    #         continue
+    #     else: 
+    #         print(f'{l[i]} appear {l.count(l[i])}')
    
     # p= open('text.txt', 'rt')
     # q = open('textcopy.txt', 'wt')
