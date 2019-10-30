@@ -4,9 +4,9 @@
 # print('lalala {}'.format(a))
 def main():
 
-    l = [1,1,1,2,3,4,4]
+    a=1
    
-    print(l) 
+    print(a) 
     # for i in range(len(l)):
     #     if (i>0 and l[i-1]==l[i]):
     #         continue
