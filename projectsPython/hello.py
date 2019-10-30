@@ -2,11 +2,17 @@
 # a: int = 9
 # print('this is version {}'.format(platform.python_version()))
 # print('lalala {}'.format(a))
-def main():
+import sys
 
-    a=1
+class test:
+    a:int
+ 
+    def __init__(self, *args):
+        self.a= args[0]
+        self.b = args[1]
+
+def main():
    
-    print(a) 
     # for i in range(len(l)):
     #     if (i>0 and l[i-1]==l[i]):
     #         continue
