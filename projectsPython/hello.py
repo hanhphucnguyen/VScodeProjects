@@ -6,7 +6,7 @@ def main():
 
     l = [1,1,1,2,3,4,4]
     l.reverse()
-    print(l)
+    print(l) 
     # for i in range(len(l)):
     #     if (i>0 and l[i-1]==l[i]):
     #         continue
