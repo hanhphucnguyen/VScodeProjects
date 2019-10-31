@@ -13,7 +13,7 @@ class test(student.Student):
         print(f'{self.name} bark bark')
 
 def main():
-    # print(student.x)
+    print(student.x)
     a = test('phuc',35)
     print(f'name : {a.name} Age: {a.age}')
     # a.bark()
