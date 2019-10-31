@@ -2,17 +2,18 @@
 # a: int = 9
 # print('this is version {}'.format(platform.python_version()))
 # print('lalala {}'.format(a))
-import sys
+# import sys
+from student import Student
 
-class test:
-    a:int
- 
+
+class test(Student):
     def __init__(self, *args):
-        self.a= args[0]
-        self.b = args[1]
+        super().__init__(*args)
 
 def main():
-   
+    a = Student('phuc',35)
+    print(f'name : {a.name} Age: {a.age}')
+
     # for i in range(len(l)):
     #     if (i>0 and l[i-1]==l[i]):
     #         continue
