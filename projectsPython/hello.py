@@ -11,12 +11,14 @@ class test(Student):
         super().__init__(*args)
     def bark(self):
         print(f'{self.name} bark bark')
-
+x=10
 def main():
-    a = test('phuc',35)
-    print(f'name : {a.name} Age: {a.age}')
-    a.bark()
-
+    # a = test('phuc',35)
+    # print(f'name : {a.name} Age: {a.age}')
+    # a.bark()
+    global x
+    x += 1
+    print(x)
     # for i in range(len(l)):
     #     if (i>0 and l[i-1]==l[i]):
     #         continue
@@ -34,3 +36,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    print(x)
