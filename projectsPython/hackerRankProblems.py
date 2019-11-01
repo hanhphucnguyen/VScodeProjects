@@ -21,5 +21,10 @@ def workbook(n, k, arr):
 def main():
     print(workbook(5,3,[4,2,6,1,10]))
 
+i = [1,2,3,4,5]
+j = (1,2,3,4)
+k = {1:'ff',2:'gg'}
+for a,b in k.items:
+    print(f'{a}{b}')
 if __name__ == "__main__":
     main()
