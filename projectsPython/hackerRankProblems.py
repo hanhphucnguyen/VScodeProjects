@@ -53,6 +53,12 @@ def fairRations(B):
         else:
             return count
 
+# Complete the introTutorial function below.
+def introTutorial(V, arr):
+    for i in arr:
+        if i==V:
+            return arr.index(i)
+
 
 def main():
 
@@ -64,6 +70,7 @@ def main():
     # print(workbook(5,3,[4,2,6,1,10]))
     # print(flatlandSpaceStations(100, [93, 41, 91, 61, 30, 6, 25, 90, 97]))   
     # print(fairRations(a))
+    print(introTutorial(4,[1,2,3,4]))
 
 
 if __name__ == "__main__":
