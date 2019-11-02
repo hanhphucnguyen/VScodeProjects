@@ -15,6 +15,7 @@ def workbook(n, k, arr):
 
         return count
 
+
 def flatlandSpaceStations(n, c):
 
     if len(c) == n:
@@ -35,9 +36,31 @@ def flatlandSpaceStations(n, c):
         return result
 
 
+# Complete the fairRations function below.
+def fairRations(B):
+    count=0
+    if sum(B) % 2 != 0:
+        return "NO"
+    else:
+        for i in range(len(B)-1):
+            if B[i]%2 !=0: 
+                B[i] +=1
+                B[i+1] += 1
+                count +=2
+        if sum(B)%2 != 0:
+            return "NO"
+        else:
+            return count
+
+
 def main():
     # print(workbook(5,3,[4,2,6,1,10]))
-    print(flatlandSpaceStations(100, [93, 41, 91, 61, 30, 6, 25, 90, 97]))
+    # print(flatlandSpaceStations(100, [93, 41, 91, 61, 30, 6, 25, 90, 97]))
+    p= open('input.txt','rt')
+    a = p.read().split()
+    for i in range(0, len(a)): 
+        a[i] = int(a[i]) 
+    print(fairRations(a))
 
 
 if __name__ == "__main__":
