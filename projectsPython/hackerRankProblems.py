@@ -1,4 +1,3 @@
-# Complete the workbook function below.
 def workbook(n, k, arr):
     curPage = 1
     count = 0
@@ -16,7 +15,6 @@ def workbook(n, k, arr):
         return count
 
 
-# Complete the flatlandSpaceStations function below.
 def flatlandSpaceStations(n, c):
 
     if len(c) == n:
@@ -37,40 +35,61 @@ def flatlandSpaceStations(n, c):
         return result
 
 
-# Complete the fairRations function below.
 def fairRations(B):
-    count=0
+    count = 0
     if sum(B) % 2 != 0:
         return "NO"
     else:
         for i in range(len(B)-1):
-            if B[i]%2 !=0: 
-                B[i] +=1
+            if B[i] % 2 != 0:
+                B[i] += 1
                 B[i+1] += 1
-                count +=2
-        if sum(B)%2 != 0:
+                count += 2
+        if sum(B) % 2 != 0:
             return "NO"
         else:
             return count
 
-# Complete the introTutorial function below.
+
 def introTutorial(V, arr):
     for i in arr:
-        if i==V:
+        if i == V:
             return arr.index(i)
+
+def insertionSort1(n, arr):
+    temp = arr[len(arr)-1]
+    for i in range(len(arr)-1, -1, -1):
+        if arr[i] < arr[i-1] or arr[i-1]>temp:
+            arr[i] = arr[i-1]
+        elif arr[i-1] < temp:
+            arr[i] = temp
+            for k in arr:
+                print(k, end=' ')
+            print()
+            break
+        for j in arr:
+            print(j, end=' ')
+        print()
+        if i==1:
+            arr[0] = temp
+            for k in arr:
+                print(k, end=' ')
+            print()
+            break
 
 
 def main():
 
     # p= open('input.txt','rt')
     # a = p.read().split()
-    # for i in range(0, len(a)): 
-    #     a[i] = int(a[i]) 
+    # for i in range(0, len(a)):
+    #     a[i] = int(a[i])
 
     # print(workbook(5,3,[4,2,6,1,10]))
-    # print(flatlandSpaceStations(100, [93, 41, 91, 61, 30, 6, 25, 90, 97]))   
+    # print(flatlandSpaceStations(100, [93, 41, 91, 61, 30, 6, 25, 90, 97]))
     # print(fairRations(a))
-    print(introTutorial(4,[1,2,3,4]))
+    # print(introTutorial(4,[1,2,3,4]))
+    insertionSort1(5, [2 ,3 ,4 ,5, 6 ,7 ,8, 9 ,10, 1])
 
 
 if __name__ == "__main__":
