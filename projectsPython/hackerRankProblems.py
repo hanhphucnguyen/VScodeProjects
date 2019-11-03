@@ -59,7 +59,7 @@ def introTutorial(V, arr):
 def insertionSort1(n, arr):
     temp = arr[len(arr)-1]
     for i in range(len(arr)-1, -1, -1):
-        if arr[i] < arr[i-1] or arr[i-1]>temp:
+        if arr[i-1]>temp:
             arr[i] = arr[i-1]
         elif arr[i-1] < temp:
             arr[i] = temp
