@@ -14,7 +14,6 @@ def workbook(n, k, arr):
 
         return count
 
-
 def flatlandSpaceStations(n, c):
 
     if len(c) == n:
@@ -33,7 +32,6 @@ def flatlandSpaceStations(n, c):
                 min = temp
         result = max(min, l, r)
         return result
-
 
 def fairRations(B):
     count = 0
@@ -88,7 +86,8 @@ def main():
     # print(flatlandSpaceStations(100, [93, 41, 91, 61, 30, 6, 25, 90, 97]))
     # print(fairRations(a))
     # print(introTutorial(4,[1,2,3,4]))
-    insertionSort1(5, [2 ,3 ,4 ,5, 6 ,7 ,8, 9 ,10, 1])
+    # insertionSort1(5, [2 ,3 ,4 ,5, 6 ,7 ,8, 9 ,10, 1])
+    print('h')
 
 
 if __name__ == "__main__":
