@@ -16,7 +16,7 @@ def test():
     print('hello')
 
 def main():
-    test()
+    print(test)
     # print(student.x)
     # a = test('phuc',35)
     # print(f'name : {a.name} Age: {a.age}')
