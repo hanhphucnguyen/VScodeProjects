@@ -12,10 +12,14 @@ class test(student.Student):
     def bark(self):
         print(f'{self.name} bark bark')
 
+def test():
+    print('hello')
+
 def main():
-    print(student.x)
-    a = test('phuc',35)
-    print(f'name : {a.name} Age: {a.age}')
+    print(test())
+    # print(student.x)
+    # a = test('phuc',35)
+    # print(f'name : {a.name} Age: {a.age}')
     # a.bark()
     # for i in range(len(l)):
     #     if (i>0 and l[i-1]==l[i]):
