@@ -12,6 +12,9 @@ import student
 import os
 from os import path
 import shutil
+from shutil import make_archive
+from zipfile import ZipFile
+import urllib.request
 
     
 class test(student.Student):
@@ -38,16 +41,14 @@ class sub(testAgr):
     def __init__(self, *args):
         super().__init__(*args)
 def main():
-    # src = path.realpath('hello.py')
-    # print(f'the real path : {src}')
-    # des = src + '.bak'
-    # shutil.copy(src,des)
-    # print(os.name)
-    # print(path.realpath('hello.py'))
+    
+    # date,time,os test 
+    # print(os.name)   
     # print(timedelta(10,5,5))
     # now = datetime.now()
     # print(now)
-    # testf(8)
+
+    # class test
     # a = testAgr(1,2,3)
     # b= testAgr(1,2)
     # c= testAgr(1)
@@ -65,11 +66,8 @@ def main():
     # a.bark()
     # b= student.Student('phuc','35')
     # b.bark()
-    # for i in range(len(l)):
-    #     if (i>0 and l[i-1]==l[i]):
-    #         continue
-    #     else: 
-    #         print(f'{l[i]} appear {l.count(l[i])}')  
+
+    # copy content
     # p= open('text.txt', 'rt')
     # q = open('textcopy.txt', 'wt')
     # for i in p:
@@ -78,6 +76,29 @@ def main():
     #     buffer = p.read(500)
     #     if buffer: q.write(buffer)
     #     else: break
+
+    # sh copy 
+    # src = path.realpath('hello.py')
+    # print(f'the real path : {src}')
+    # des = src + '.bak'
+    # shutil.copy(src,des)
+    # a,b = path.split(src)
+    # print(f'{a}        {b}')
+    # make_archive('archive','zip',a)
+
+    # zipfile create
+    # with ZipFile('testzip.zip','w') as newzip:
+    #     newzip.write('input.txt')
+    #     newzip.write('text.txt')
+    # newzip = ZipFile('testzip.zip','w')
+    # newzip.write('input.txt')
+    # newzip.write('text.txt')
+
+    # URL request
+    # weburl = urllib.request.urlopen('http://www.google.com')
+    # print(f'{weburl.getcode()}')
+    # read = weburl.read()
+    # print(read)
 
 if __name__ == "__main__":
     main()
