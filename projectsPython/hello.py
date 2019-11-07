@@ -5,6 +5,8 @@
 # import sys
 
 import student
+import math
+import random
 # from datetime import date
 # from datetime import time
 # from datetime import datetime
@@ -98,9 +100,22 @@ def main():
     # print(f'{weburl.getcode()}')
     # read = weburl.read()
     # print(read)
-    i = {1:'aa',2:'33',3:'88'}
-    print(i[1])
 
+    # check is instance
+    # a = test('phuc',32)
+    # print(isinstance(a,student.Student))
+
+    # math & random library
+    # print(math.gcd(12,3))
+    # for i in range(10):
+    #     a = random.randrange(10)
+    #     print(a)
+    # ar = ['cat','dog','shit']
+    # print(random.choice(ar))
+    # random.shuffle(ar)
+    # a = random.randrange(10,20)
+    # print(a)
+    
 if __name__ == "__main__":
     main()
     
