@@ -41,8 +41,6 @@ class sub(testAgr):
     def __init__(self, *args):
         super().__init__(*args)
 def main():
-    a =[1,2,3,4]
-    print(min(a))
     # date,time,os test 
     # print(os.name)   
     # print(timedelta(10,5,5))
@@ -100,8 +98,8 @@ def main():
     # print(f'{weburl.getcode()}')
     # read = weburl.read()
     # print(read)
-
-    print('ff')
+    i = {1:'aa',2:'33',3:'88'}
+    print(i[1])
 
 if __name__ == "__main__":
     main()
