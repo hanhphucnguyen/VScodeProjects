@@ -7,6 +7,7 @@
 import student
 import math
 import random
+import time
 # from datetime import date
 # from datetime import time
 # from datetime import datetime
@@ -42,6 +43,19 @@ class testAgr:
 class sub(testAgr):
     def __init__(self, *args):
         super().__init__(*args)
+
+
+def decotest(f):
+    def run():
+        print('before')
+        f()
+        print('after')
+    return run
+
+@decotest
+def hehe():
+    print('abc')
+
 def main():
     # date,time,os test 
     # print(os.name)   
@@ -115,7 +129,20 @@ def main():
     # random.shuffle(ar)
     # a = random.randrange(10,20)
     # print(a)
-    
+
+    # time module
+    # i = 0
+    # for j in range(10):
+    #     time.sleep(1)
+    #     print(i)
+    #     i+=1
+
+    # decorator test
+    # hehe()
+
+
+
 if __name__ == "__main__":
     main()
+    hehe()
     
