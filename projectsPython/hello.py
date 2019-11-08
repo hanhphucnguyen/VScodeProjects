@@ -140,9 +140,17 @@ def main():
     # decorator test
     # hehe()
 
+    # GeneratorExpession
+    # i = 7 if 4>5 else 4
+    # a = [str(i) for i in range(10)]
+    # print(a)
+    # print(type(a))
+    # with open('input.txt','rt') as f:
+    #     for i in f:
+    #         print(i)
 
 
 if __name__ == "__main__":
     main()
-    hehe()
+   
     
