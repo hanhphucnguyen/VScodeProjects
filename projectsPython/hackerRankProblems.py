@@ -113,6 +113,12 @@ def happyLadybugs(b):
 
     return "YES" if flag else 'NO'
 
+def strangeCounter(t):
+    rem = 3
+    while t > rem:
+        t = t-rem
+        rem *= 2
+    return rem-t+1
 
 
 def main():
@@ -127,6 +133,8 @@ def main():
     # print(introTutorial(4,[1,2,3,4]))
     # insertionSort1(5, [2 ,3 ,4 ,5, 6 ,7 ,8, 9 ,10, 1])
     # print(happyLadybugs('AABBC'))
+    print(strangeCounter(4))
+    
 
 
 if __name__ == "__main__":
