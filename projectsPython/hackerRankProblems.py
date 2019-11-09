@@ -14,6 +14,7 @@ def workbook(n, k, arr):
 
         return count
 
+
 def flatlandSpaceStations(n, c):
 
     if len(c) == n:
@@ -32,6 +33,7 @@ def flatlandSpaceStations(n, c):
                 min = temp
         result = max(min, l, r)
         return result
+
 
 def fairRations(B):
     count = 0
@@ -54,10 +56,11 @@ def introTutorial(V, arr):
         if i == V:
             return arr.index(i)
 
+
 def insertionSort1(n, arr):
     temp = arr[len(arr)-1]
     for i in range(len(arr)-1, -1, -1):
-        if arr[i-1]>temp:
+        if arr[i-1] > temp:
             arr[i] = arr[i-1]
         elif arr[i-1] < temp:
             arr[i] = temp
@@ -68,12 +71,48 @@ def insertionSort1(n, arr):
         for j in arr:
             print(j, end=' ')
         print()
-        if i==1:
+        if i == 1:
             arr[0] = temp
             for k in arr:
                 print(k, end=' ')
             print()
             break
+
+
+def happyLadybugs(b):
+    flag = True
+    if len(b) == 1 and b[0] != '_':
+        flag = False
+    elif '_' not in b:
+        for i in range(len(b)):
+            if i == 0:
+                if b[i+1] != b[i]:
+                    flag = False
+            elif i == len(b)-1:
+                if b[i-1] != b[i]:
+                    flag = False
+            else:
+                if b[i-1] != b[i] and b[i+1] != b[i]:
+                    flag = False
+    else:
+        bnew = sorted(b)
+        for i in range(len(bnew)):
+            if i == 0:
+                if bnew[i] == '_':
+                    continue
+                if bnew[i+1] != bnew[i]:
+                    flag = False
+            elif i == len(bnew)-1:
+                if bnew[i] == '_':
+                    continue
+                if bnew[i-1] != bnew[i]:
+                    flag = False
+            else:
+                if bnew[i-1] != bnew[i] and bnew[i+1] != bnew[i]:
+                    flag = False
+
+    return "YES" if flag else 'NO'
+
 
 
 def main():
@@ -87,8 +126,7 @@ def main():
     # print(fairRations(a))
     # print(introTutorial(4,[1,2,3,4]))
     # insertionSort1(5, [2 ,3 ,4 ,5, 6 ,7 ,8, 9 ,10, 1])
-    print('test')
-
+    print(happyLadybugs('AABBC'))
 
 
 if __name__ == "__main__":
