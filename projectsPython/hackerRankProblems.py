@@ -126,7 +126,7 @@ def main():
     # print(fairRations(a))
     # print(introTutorial(4,[1,2,3,4]))
     # insertionSort1(5, [2 ,3 ,4 ,5, 6 ,7 ,8, 9 ,10, 1])
-    print(happyLadybugs('AABBC'))
+    # print(happyLadybugs('AABBC'))
 
 
 if __name__ == "__main__":
