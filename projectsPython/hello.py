@@ -149,7 +149,11 @@ def main():
     #     for i in f:
     #         print(i)
 
-
+    # all and any bool value
+    # a = all(i.isdigit() for i in '123a')
+    # a = any(i.isdigit() for i in '123a')
+    # print(str(a))
+    
 if __name__ == "__main__":
     main()
    
