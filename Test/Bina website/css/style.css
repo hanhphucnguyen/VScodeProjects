@@ -1,0 +1,178 @@
+body {
+    background-color: #141539;
+}
+#circle {
+    display: block;
+    background-color: #d394ac;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+}
+#kendama {
+  height: 250px;
+  width: 150px;
+  margin-top: 18%;
+  margin-left: 30%;
+  -webkit-animation:spin 3s linear infinite;
+  -moz-animation:spin 3s linear infinite;
+  animation:spin 3s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg)}}
+
+#logo {
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    box-shadow: -2px -2px 3px white;
+    margin-top: -7%;
+    margin-left: 3%;
+}
+#heart {
+    position: absolute;
+    height: 40px;
+    width: 150px;
+    margin-top: -4%;
+    right: 5%;
+}
+#topmenu {
+    background-image: url("cloud.png");
+    height: 180px;
+}
+
+#mail {
+    height: 55px;
+    width: 90px;
+    position: fixed;
+    bottom: 10%;
+    left: 3%;
+}
+
+#tora {
+    height: 55px;
+    width: 55px;
+    position: fixed;
+    bottom: 10%;
+    right: 3%;
+}
+
+#nav {
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 5%;
+}
+
+/* main navigation bar */
+#nav ul{
+    list-style: none;  /*remove bullet*/
+    padding-left: 0;   /*remove default space*/
+    margin-left: auto;
+    margin-right: auto;
+  }
+#nav li{
+    margin-top: 20px;  
+    margin-bottom: 20px;   
+    border: 4px solid #d394ac;
+    border-radius: 40px;
+    text-align: center;
+    background-color: #8393ca;
+    box-shadow: 0px 2px 10px #d394ac;
+  }
+#nav a{
+    color: whitesmoke;
+    font-size: 2vw;
+    text-decoration: none; /*remove underline*/
+    padding-top: 10px;  
+    padding-bottom: 10px;  
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+/* main hover for navigation bar*/
+ #nav a {
+    display:block;
+   }
+ #nav a:hover, #nav a:focus {
+    color:red;
+ } 
+#nav li:hover, #nav li:focus {
+    background-color:whitesmoke;
+}
+
+/* about site */
+#abcontainer {
+    width: 95%;
+}
+#abicon {
+    width: 40%;
+    height: 500px;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom:15%;
+    float: left;
+    background-color: #e2b13a;
+}
+#abicon img{
+    width: 230px;
+    height: 200px;
+    display:block;
+    margin:auto;
+    margin-top: 150px;
+}
+#abtext {
+    width: 45%;
+    float: right;
+    font-size: 1.5vw;
+    color: #e2b13a;
+    text-align: center;
+    margin-top: 15%;
+}
+
+/* email site*/
+#econtainer {
+    width: 95%;
+    margin: 10% auto auto auto;
+}
+#eleft  {
+    width: 45%;
+    float: left;
+    font-size: 1.5vw;
+    margin-left: 15%;
+}
+#eright  {
+    width: 40%;
+    float: right;
+    font-size: 1.5vw;
+}
+#eleft input, #eright textarea {
+    display: block;
+    background-color: #141539;
+    border: none;
+    color: #5c4b39;
+    text-align: center;
+    border-bottom: 1px solid #e2b13a;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+#eright input{
+    position: relative;
+    top: 50px;
+    left: 30px;
+    border: none;
+    padding-left: 100px;
+    padding-right: 100px;
+    cursor: pointer;
+}
+#eright textarea {
+    margin-bottom: 40px;
+}
+#eright img{
+    display: block;
+    width: 400px;
+    height: 100px;
+}

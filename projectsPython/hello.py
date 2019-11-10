@@ -153,6 +153,8 @@ def main():
     # a = all(i.isdigit() for i in '123a')
     # a = any(i.isdigit() for i in '123a')
     # print(str(a))
+
+    print('hello from macbook pro')
     
 
 if __name__ == "__main__":
