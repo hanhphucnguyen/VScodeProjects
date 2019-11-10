@@ -172,11 +172,8 @@ def main():
     # insertionSort1(5, [2 ,3 ,4 ,5, 6 ,7 ,8, 9 ,10, 1])
     # print(happyLadybugs('AABBC'))
     # print(strangeCounter(4))
-    # print(minimumNumber(11,'#HackerRank'))
+    print(minimumNumber(11,'#HackerRank'))
     # print(alternate('asdcbsdcagfsdbgdfanfghbsfdab')) #uncomplete
-
-
-
 
 if __name__ == "__main__":
     main()
