@@ -113,12 +113,26 @@ def happyLadybugs(b):
 
     return "YES" if flag else 'NO'
 
+
 def strangeCounter(t):
     rem = 3
     while t > rem:
         t = t-rem
         rem *= 2
     return rem-t+1
+
+
+def minimumNumber(n, password):
+    count = 0    
+    if any(i.isdigit() for i in password)==False:
+        count+=1
+    if any(i.islower() for i in password)==False:
+        count+=1
+    if any(i.isupper() for i in password)==False:
+        count+=1
+    if any(i in '!@#$%^&*()-+' for i in password)==False:
+        count+=1
+    return max(count,6-n)
 
 
 def main():
@@ -133,8 +147,8 @@ def main():
     # print(introTutorial(4,[1,2,3,4]))
     # insertionSort1(5, [2 ,3 ,4 ,5, 6 ,7 ,8, 9 ,10, 1])
     # print(happyLadybugs('AABBC'))
-    print(strangeCounter(4))
-    
+    # print(strangeCounter(4))
+    print(minimumNumber(11,'#HackerRank'))
 
 
 if __name__ == "__main__":
