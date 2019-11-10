@@ -155,6 +155,7 @@ def main():
     # print(str(a))
 
     print('hello from macbook pro')
+    print('hello 2')
     
 
 if __name__ == "__main__":
