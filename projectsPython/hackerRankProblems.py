@@ -134,6 +134,30 @@ def minimumNumber(n, password):
         count+=1
     return max(count,6-n)
 
+def alternate(s):
+    if len(s)==2:
+        return 2 if s[0]!=s[1] else 0
+    else:        
+        i=0
+        while len(s)>=3:
+            i +=1
+            if i==len(s)-1: break
+            if s[i]== s[i-1] or s[i]== s[i+1]:
+                s = s.replace(s[i],'')
+                i=0
+        sets = set(s)
+        if len(sets)<2:
+            return 0
+        elif len(sets)==2:
+            return len(s)
+        else:
+            result1 = max(s.count(i) for i in sets)
+            for i in sets:
+                if result1==s.count(i):
+                    sets.remove(i)
+                    break
+            result2 = max(s.count(i) for i in sets)
+            return result1+result2
 
 def main():
     # p= open('input.txt','rt')
@@ -148,7 +172,10 @@ def main():
     # insertionSort1(5, [2 ,3 ,4 ,5, 6 ,7 ,8, 9 ,10, 1])
     # print(happyLadybugs('AABBC'))
     # print(strangeCounter(4))
-    print(minimumNumber(11,'#HackerRank'))
+    # print(minimumNumber(11,'#HackerRank'))
+    # print(alternate('asdcbsdcagfsdbgdfanfghbsfdab')) #uncomplete
+
+
 
 
 if __name__ == "__main__":
