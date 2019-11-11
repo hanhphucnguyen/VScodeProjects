@@ -5,7 +5,7 @@ import subprocess
 import requests
 
 API_URL = 'https://www.googleapis.com/geolocation/v1/geolocate?key='
-API_KEY = 'AIzaSyBbzftXRb-82QIOH0T3_FUMif402VdVo-c ' # replace with your own Google Maps API key
+API_KEY = 'AIzaSyDYCijGSNINAP2r1OtArYu7ys1DEdeCP2U' # replace with your own Google Maps API key
 
 # add wifi info to request if available
 payload = {'considerIp': 'true'}
