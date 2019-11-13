@@ -31,6 +31,12 @@ def testf(x):
     c = 9 if x>7 else 0
     print(c)
 
+def abc(x):
+    if x%2==0:
+        return False
+    else:
+        return True
+
 class testAgr:
     def __init__(self, *args):
         if len(args)==3:
@@ -153,7 +159,10 @@ def main():
     # a = all(i.isdigit() for i in '123a')
     # a = any(i.isdigit() for i in '123a')
     # print(str(a))
-    
+       
+    # i = (1,2,3,4)
+    # z = list(filter(abc,i))
+    # print(z)
     
 
 if __name__ == "__main__":
