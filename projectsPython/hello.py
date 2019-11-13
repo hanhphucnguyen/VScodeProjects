@@ -163,6 +163,9 @@ def main():
     # i = (1,2,3,4)
     # z = list(filter(abc,i))
     # print(z)
+    # i = [1,2,3,4]
+    # j = dict.fromkeys(i,0)
+    # print(j)
     
 
 if __name__ == "__main__":
