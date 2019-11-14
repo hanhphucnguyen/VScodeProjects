@@ -5,6 +5,8 @@
 # import sys
 
 import student
+import collections
+from collections import Counter
 import math
 import random
 import time
@@ -166,7 +168,11 @@ def main():
     # i = [1,2,3,4]
     # j = dict.fromkeys(i,0)
     # print(j)
-    
+
+    # deque datatype
+    # u=[1,2,3,4]
+    # i = collections.deque(u)
+    # print(i)
 
 if __name__ == "__main__":
     main()
