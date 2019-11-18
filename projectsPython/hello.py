@@ -10,6 +10,7 @@ from collections import Counter
 import math
 import random
 import time
+from enum import Enum
 # from datetime import date
 # from datetime import time
 # from datetime import datetime
@@ -27,6 +28,8 @@ class test(student.Student):
         super().__init__(*args)
     def bark(self):
         print(f'{self.name} bark bark')
+    def __str__(self):
+        return "hihi test"
 
 def testf(x):
     print("big" if x>7 else "small")
@@ -64,7 +67,14 @@ def decotest(f):
 def hehe():
     print('abc')
 
+class Haha(Enum):
+    o=1
+    u=2
+
 def main():
+    # enum class
+    # print(Haha.o.value)
+    
     # date,time,os test 
     # print(os.name)   
     # print(timedelta(10,5,5))
