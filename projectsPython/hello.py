@@ -72,7 +72,7 @@ class Haha(Enum):
     u=2
 
 def main():
-
+    
     # enum class
     # print(Haha.o.value)
     
