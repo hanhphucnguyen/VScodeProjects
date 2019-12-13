@@ -10,7 +10,7 @@ def taumBday(b, w, bc, wc, z):
 
 def main():
     # print(taumBday(3,3,1,9,2))
-    print('f')
+    # print('f')
 
 
 if __name__ == "__main__":
