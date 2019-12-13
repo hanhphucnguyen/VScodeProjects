@@ -17,11 +17,18 @@ def caesarCipher(s,k):
             i= chr(((num-65+k)%26)+65)
         result += i
     return result
-    
+
+def marsExploration(s):
+    count = 0
+    for i in range(len(s)-2):
+        if s[i] != 'S' and s[i+1] !='O' and s[i+2] != 'S':
+            count +=1
+        i +=2   
+    return count
 
 def main():
     # print(taumBday(3,3,1,9,2))
-    print(caesarCipher('middle-Outz',2))
+    # print(caesarCipher('middle-Outz',2))
 
 
 if __name__ == "__main__":
