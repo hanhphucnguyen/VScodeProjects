@@ -20,16 +20,18 @@ def caesarCipher(s,k):
 
 def marsExploration(s):
     count = 0
-    for i in range(len(s)-2):
-        if s[i] != 'S' and s[i+1] !='O' and s[i+2] != 'S':
-            count +=1
-        i +=2   
+    i=0
+    while i < len(s):
+        for j in 'SOS':           
+            if s[i] != j:
+                count +=1
+            i +=1  
     return count
 
 def main():
     # print(taumBday(3,3,1,9,2))
     # print(caesarCipher('middle-Outz',2))
-
+    print(marsExploration('SOSSRT'))
 
 if __name__ == "__main__":
     main()
