@@ -7,17 +7,21 @@ def taumBday(b, w, bc, wc, z):
         else:
             return (b+w)*bc + w*z
 
-def cipher(s,k):
-    num = ord(s)
-    if 97 <= num <= 122:
-        return chr(((num-97+k)%26)+97)
-    elif 65 <= num <= 90:
-        return chr(((num-65+k)%26)+65)
-    else: return s
+def caesarCipher(s,k):
+    result=''
+    for i in s:
+        num = ord(i)
+        if 97 <= num <= 122:
+            i = chr(((num-97+k)%26)+97)
+        elif 65 <= num <= 90:
+            i= chr(((num-65+k)%26)+65)
+        result += i
+    return result
+    
 
 def main():
     # print(taumBday(3,3,1,9,2))
-    print('f')
+    print(caesarCipher('middle-Outz',2))
 
 
 if __name__ == "__main__":
