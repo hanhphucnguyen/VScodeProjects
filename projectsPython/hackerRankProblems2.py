@@ -31,7 +31,7 @@ def marsExploration(s):
 def main():
     # print(taumBday(3,3,1,9,2))
     # print(caesarCipher('middle-Outz',2))
-    print(marsExploration('SOSSRT'))
+    # print(marsExploration('SOSSRT'))
 
 if __name__ == "__main__":
     main()
