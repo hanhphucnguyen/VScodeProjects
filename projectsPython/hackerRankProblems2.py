@@ -28,10 +28,24 @@ def marsExploration(s):
             i +=1  
     return count
 
+def hackerrankInString(s):
+    sample = 'hackerrank'
+    cur = 0
+    for i in s:
+        if i == sample[cur]:
+            cur +=1
+        if cur>= len(sample): break
+
+    if cur >= len(sample):
+        return 'YES'
+    else:
+        return 'NO'
+
 def main():
     # print(taumBday(3,3,1,9,2))
     # print(caesarCipher('middle-Outz',2))
     # print(marsExploration('SOSSRT'))
+    print(hackerrankInString('hackerworld'))
 
 if __name__ == "__main__":
     main()
