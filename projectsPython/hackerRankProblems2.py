@@ -42,18 +42,30 @@ def hackerrankInString(s):
         return 'NO'
 
 def pangrams(s):
-    sample = 'abcdefghijklmnopqrstuvwxyz'
-    sampleDic = dict.fromkeys(sample,0,0)
+    sample = 'abcdefghijklmnopqrstuvwxyz '
+    sampleDic = dict.fromkeys(sample,0)
     s = s.lower()
-    for i,j in sampleDic.items:
-        print(f'key:{i} value{j}')
+    for i in s:
+        sampleDic[i] +=1
+    flag = True
+    for i in sample:
+        if i == ' ':pass
+        else:
+            if sampleDic[i]<1:
+                flag = False
+                break
+    if flag: 
+        return 'pangram'
+    else:
+        return 'not pangram'
+
 
 def main():
     # print(taumBday(3,3,1,9,2))
     # print(caesarCipher('middle-Outz',2))
     # print(marsExploration('SOSSRT'))
     # print(hackerrankInString('hackerworld'))
-    pangrams(DfdjbdfgJJJJ)
+    print(pangrams('Wepromptlyjudgedantiqueivorybucklesforthenprize'))
 
 if __name__ == "__main__":
     main()
