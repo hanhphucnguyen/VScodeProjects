@@ -65,7 +65,7 @@ def main():
     # print(caesarCipher('middle-Outz',2))
     # print(marsExploration('SOSSRT'))
     # print(hackerrankInString('hackerworld'))
-    print(pangrams('Wepromptlyjudgedantiqueivorybucklesforthenprize'))
+    # print(pangrams('Wepromptlyjudgedantiqueivorybucklesforthenprize'))
 
 if __name__ == "__main__":
     main()
