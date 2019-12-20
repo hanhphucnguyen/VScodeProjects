@@ -66,6 +66,8 @@ def main():
     # print(marsExploration('SOSSRT'))
     # print(hackerrankInString('hackerworld'))
     # print(pangrams('Wepromptlyjudgedantiqueivorybucklesforthenprize'))
-    print('')
+    p = [1,2,3,'a']
+    for i in p:
+        print(i)
 if __name__ == "__main__":
     main()
