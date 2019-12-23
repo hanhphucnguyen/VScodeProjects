@@ -70,6 +70,7 @@ def main():
     i = {'o':1,'j':7}
     for n,m in i.items():
         print(m)
+    print('f'   )
     
 
 if __name__ == "__main__":
