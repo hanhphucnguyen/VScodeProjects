@@ -185,6 +185,10 @@ def main():
     # i = collections.deque(u)
     # print(i)
 
+    # i = {'o':1,'j':7}
+    # for n,m in i.items():
+    #     print(m)
+
 if __name__ == "__main__":
     main()
    

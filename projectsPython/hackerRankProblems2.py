@@ -67,9 +67,7 @@ def main():
     # print(hackerrankInString('hackerworld'))
     # print(pangrams('Wepromptlyjudgedantiqueivorybucklesforthenprize'))
 
-    i = {'o':1,'j':7}
-    for n,m in i.items():
-        print(m)
+   
     
     
 
