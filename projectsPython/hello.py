@@ -188,7 +188,7 @@ def main():
     # i = {'o':1,'j':7}
     # for n,m in i.items():
     #     print(m)
-    print('test')
+
 
 if __name__ == "__main__":
     main()
