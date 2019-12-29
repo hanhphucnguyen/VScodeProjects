@@ -77,6 +77,21 @@ def weightedUniformStrings(s, queries):
             result.append('No')
     return result
 
+def separateNumbers(s):
+    if s[0] == s:
+        print('NO')
+        return
+    for i in range(1, len(s)):
+        mystack = []
+        mystack.append(s[:i])
+        while len(''.join(mystack)) < len(s):
+            mystack.append(str(int(mystack[-1]) + 1))
+        if ''.join(mystack) == s:
+            print('YES', mystack[0])
+            break
+        if i == len(s) - 1:
+            print('NO')
+
 def main():
     # print(taumBday(3,3,1,9,2))
     # print(caesarCipher('middle-Outz',2))
@@ -84,6 +99,7 @@ def main():
     # print(hackerrankInString('hackerworld'))
     # print(pangrams('Wepromptlyjudgedantiqueivorybucklesforthenprize'))
     # weightedUniformStrings('aaabbbbcccddd',[9,7,8,12,5])
+    separateNumbers('91011')
 
 
 if __name__ == "__main__":
