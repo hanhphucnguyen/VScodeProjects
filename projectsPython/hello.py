@@ -188,7 +188,9 @@ def main():
     # i = {'o':1,'j':7}
     # for n,m in i.items():
     #     print(m)
-    
+
+    o = random.randint(10,20)
+    print(o)
 
 
 if __name__ == "__main__":
