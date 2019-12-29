@@ -100,6 +100,7 @@ def main():
     # print(pangrams('Wepromptlyjudgedantiqueivorybucklesforthenprize'))
     # weightedUniformStrings('aaabbbbcccddd',[9,7,8,12,5])
     separateNumbers('91011')
+    
 
 
 if __name__ == "__main__":
