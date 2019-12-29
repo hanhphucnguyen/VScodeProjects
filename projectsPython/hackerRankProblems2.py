@@ -83,7 +83,7 @@ def main():
     # print(marsExploration('SOSSRT'))
     # print(hackerrankInString('hackerworld'))
     # print(pangrams('Wepromptlyjudgedantiqueivorybucklesforthenprize'))
-    weightedUniformStrings('aaabbbbcccddd',[9,7,8,12,5])
+    # weightedUniformStrings('aaabbbbcccddd',[9,7,8,12,5])
 
 
 if __name__ == "__main__":
