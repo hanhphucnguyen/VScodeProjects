@@ -59,6 +59,23 @@ def pangrams(s):
     else:
         return 'not pangram'
 
+def weightedUniformStrings(s, queries):
+    result = []
+    setResult = set()
+    temp=1
+    for i in range(len(s)):       
+        if (i>=1) and (s[i] == s[i-1]):    
+            temp += 1       
+            setResult.add((ord(s[i])-96)*temp)
+        else:
+            temp=1
+            setResult.add(ord(s[i])-96)
+    for j in queries:
+        if j in setResult:
+            result.append('Yes')
+        else:
+            result.append('No')
+    return result
 
 def main():
     # print(taumBday(3,3,1,9,2))
@@ -66,10 +83,8 @@ def main():
     # print(marsExploration('SOSSRT'))
     # print(hackerrankInString('hackerworld'))
     # print(pangrams('Wepromptlyjudgedantiqueivorybucklesforthenprize'))
+    weightedUniformStrings('aaabbbbcccddd',[9,7,8,12,5])
 
-   
-    
-    
 
 if __name__ == "__main__":
     main()
