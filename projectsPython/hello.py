@@ -191,6 +191,7 @@ def main():
 
     o = random.randint(10,20)
     print(o)
+    print('fdsfgdsg')
 
 
 if __name__ == "__main__":
