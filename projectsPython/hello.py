@@ -189,9 +189,12 @@ def main():
     # for n,m in i.items():
     #     print(m)
 
-    o = random.randint(10,20)
-    print(o)
-    print('fdsfgdsg')
+    # o = random.randint(10,20)
+    # print(o)
+    # print('fdsfgdsg')
+    a= [1,2,3,4,5]
+    for i,j in enumerate(a):
+        print(f'{i}  {j}')
 
 
 if __name__ == "__main__":
