@@ -10,6 +10,7 @@
 #             return cache[n]
 # print(fibo(60))
 
+# --------------------
 # For loop example
 # presidents = ["Washington", "Adams", "Jefferson", "Madison", "Monroe", "Adams", "Jackson"]
 # for num, name in enumerate(presidents, start=1):
@@ -21,8 +22,10 @@
 # for num in enumerate(presidents):
 #     print(num)
 
+# -----------------
 # Reverse number
 # i = 12345
 # s = str(i)
-# u = s[::-1]
+# u = s[::-1]  #Reverse string
 # i = int(u)
+
