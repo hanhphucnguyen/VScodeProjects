@@ -69,17 +69,17 @@
 #     except EOFError:
 #         break
 
-while True:
-    inp = input()
-    if not inp:
-        break
-    else:
-        result = 0
-        arr = list(inp)
-        arrSorted = sorted(arr)
-        if arr == arrSorted: 
-            for i in arr:
-                print(ord(i)-96)
+# while True:
+#     inp = input()
+#     if not inp:
+#         break
+#     else:
+#         result = 0
+#         arr = list(inp)
+#         arrSorted = sorted(arr)
+#         if arr == arrSorted: 
+#             for i in arr:
+#                 print(ord(i)-96)
 
 
 
