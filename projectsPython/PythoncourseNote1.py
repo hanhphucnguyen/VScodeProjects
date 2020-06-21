@@ -24,6 +24,7 @@ r = s.upper()
 r = s.lower()
 u = s.split()    # ["Hello","World"] Split a string by blank space (default)
 r = s.split('W') # ["Hello ","orld"]
+s.count('llo')   # find substring and count
 
 # ---------------------------------------------------------------------------
 #List
