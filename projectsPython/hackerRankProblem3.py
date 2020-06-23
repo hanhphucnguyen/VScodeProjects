@@ -16,6 +16,22 @@ def funnyString(s):
     ns=[abs(ord(s[i])-ord(s[i+1])) for i in range(0,len(s)-1,1)]
     rns=[abs(ord(s[i])-ord(s[i-1])) for i in range(len(s)-1,0,-1)]
     return 'Funny' if ns ==rns else 'Not Funny'
+
+def twoStrings(s1, s2):
+    return "YES" if set(s1).intersection(set(s2)) else "NO"
+
+from collections import Counter
+def gameOfThrones(s):
+    # Complete this function
+    num_odd = 0
+    s1 = Counter(s)
+    for each in s1.values():
+        if each % 2 != 0:
+            num_odd += 1
+            # when num_odd > 1, not palindrome
+            if num_odd > 1:
+                return 'NO'
+    return ('YES')
     
 def main():
     # print(bigSorting([31415926535897932384626433832795,1,3,10,3,5]))
