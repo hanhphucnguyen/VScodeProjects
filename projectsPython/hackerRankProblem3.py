@@ -32,6 +32,20 @@ def gameOfThrones(s):
             if num_odd > 1:
                 return 'NO'
     return ('YES')
+
+def closestNumbers(arr):
+    arr.sort()
+    min_dif = abs(arr[0]-arr[1])
+    ans = []
+    for i in range(len(arr)-1):
+        d = abs(arr[i]-arr[i+1])
+        if d==min_dif:
+            ans += [arr[i], arr[i+1]]
+            min_dif =d
+        elif d<min_dif:
+            ans = [arr[i], arr[i+1]]
+            min_dif =d
+    return ans
     
 def main():
     # print(bigSorting([31415926535897932384626433832795,1,3,10,3,5]))
