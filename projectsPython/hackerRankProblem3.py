@@ -64,6 +64,21 @@ def flippingBits(n):
 
     # ^ = bitwise XOR
     return n ^ THE_FLIPPING
+
+def maximumToys(prices, k):
+    prices.sort()
+    i = 0
+    while k > 0 and i < len(prices):
+        k -= prices[i]
+        i += 1
+
+    return i - 1
+
+def pokerNim(k, c):
+    t=0
+    for i in c: t ^= i
+    if t==0:return("Second") 
+    else:return("First")
     
 def main():
     # print(bigSorting([31415926535897932384626433832795,1,3,10,3,5]))
