@@ -46,6 +46,13 @@ def closestNumbers(arr):
             ans = [arr[i], arr[i+1]]
             min_dif =d
     return ans
+
+def marcsCakewalk(calorie):
+    calorie = sorted(calorie, reverse=True)
+    a = 0
+    for i in range(len(calorie)):
+        a += calorie[i]*pow(2, i)
+    return a
     
 def main():
     # print(bigSorting([31415926535897932384626433832795,1,3,10,3,5]))
