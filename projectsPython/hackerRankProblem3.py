@@ -79,6 +79,14 @@ def pokerNim(k, c):
     for i in c: t ^= i
     if t==0:return("Second") 
     else:return("First")
+
+def icecreamParlor(m, arr):
+    test = dict()
+    for i in range(len(arr)):
+        if arr[i] not in test: 
+            test[m-arr[i]] = i+1 #dollar match amount is key, 1 based index is value
+        else:
+            return sorted([i+1, test[arr[i]]])
     
 def main():
     # print(bigSorting([31415926535897932384626433832795,1,3,10,3,5]))
